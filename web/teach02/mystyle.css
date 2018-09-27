@@ -1,3 +1,7 @@
 .embolden:hover {
     font-weight: bold;
 }
+
+body {
+    margin: .5em;
+}
