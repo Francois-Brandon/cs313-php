@@ -17,16 +17,13 @@
          });
      </script>
     
-    <div class="container-fluid bg-4 text-center">
-    <?php
-        date_default_timezone_set("America/New_York");
-        echo "The time is " . date("h:i:sa");
-    ?>
+    <div class="container-fluid text-center">
+        <p>Browse for information about my interests and assignments.</p>
     </div>
     
     
     <footer class="container-fluid bg-4 text-center">
-        <p>Copyright &copy;2018 Brandon Francois</p> 
+        <?php include 'footer.php';?> 
     </footer>
 
 </body>
