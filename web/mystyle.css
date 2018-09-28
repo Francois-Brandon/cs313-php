@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #ebf7f9;
+    font-family: 'Slabo 27px', serif;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+.navbar-brand {
+    font-size: 2em;
+}
+
+.image-header { 
+    background-color: #e2e7e9;
+    background-image: url(images/woodworking1.jpeg);
+    color: #ffffff;
+    font-family: 'Slabo 27px', serif;
+    font-size: 5em;
+    letter-spacing: 5px;
+    height: 500px;
+    background-size: cover;
+}
+
+.image-header p {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 500px;
+}
+
+.bg-1 { 
+    background-color: #e2e7e9;
+    color: #ffffff;
+    font-family: 'Slabo 27px', serif;
+    font-size: 5em;
+    letter-spacing: 5px;
+    height: 500px;
+}
+
+.bg-1 p {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 500px;
+}
+
+.bg-4 { 
+    background-color: #2f2f2f;
+    color: #ffffff;
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 2px;
+    padding-top: 10px;
+}
