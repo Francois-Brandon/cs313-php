@@ -23,7 +23,7 @@
     
     
     <footer class="container-fluid bg-4 text-center">
-        <p>Copyright &copy;2018 Brandon Francois</p> 
+        <?php include 'footer.php';?>  
     </footer>
 
 </body>
