@@ -83,21 +83,21 @@ $cartCount = getCartCount();
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #1</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='index.php?id=1'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=1'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #2</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='index.php?id=2'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=2'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #3</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='index.php?id=3'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=3'>Add to cart</a></div>
       </div>
     </div>
   </div>
@@ -109,21 +109,21 @@ $cartCount = getCartCount();
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #4</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='index.php?id=4'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=4'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #5</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='index.php?id=5'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=5'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #6</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='index.php?id=6'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=6'>Add to cart</a></div>
       </div>
     </div>
   </div>
