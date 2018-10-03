@@ -15,16 +15,16 @@
     <?php
         $visited = $_POST['continents'];
         if(empty($visited)) {
-            echo("No continents selected. you must be from space.");
+            echo("No continents selected. You must be from space.");
         }
         else {
             $N = count($visited);
-            echo("Continents Visited: ");
+            echo("Continents Visited:<br>");
             for($i=0; $i < $N; $i++) {
-                echo($visited[$i] . " ");
+                echo($visited[$i] . "<br>");
             }
         }
-    ?>
+    ?><br>
 
     
     Comments: <?php echo $_POST["comments"]; ?><br>

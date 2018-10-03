@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Monoton|Slabo+27px');
+
+body {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+}
+    
+
+.navbar-brand p {
+    margin: 0px;
+    font-size: 1.5em;
+    color: #FFFFFF;
+
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    background-image: url(images/discgolfbg2.png);
+    background-size: cover;
+    height: 260px;
+
+}
+.logo-name {
+    text-align: left;
+}
+ 
+.logo-img {
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 15px;
+}
+
+.navbar-brand {
+    padding-top: 8px;
+}
+
+.cart-icon {
+    color: #FFFFFF;
+    
+}
+
+.cart {
+    color: #FFFFFF;
+    font-size: 1.5em
+}
+
+.panel-heading {
+    background-color: #7EBEA9 !important;
+    border-color: #7EBEA9 !important;
+}
+
+.panel-primary {
+    border-color: #7EBEA9 !important;
+}
+
+.panel-footer {
+    background-color: #96B545 !important;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer {
+    background-color: #101010;
+    color: #fff;
+}
