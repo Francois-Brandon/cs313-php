@@ -41,14 +41,9 @@ include 'cart-actions.php';
 					</thead>
 					<tbody>
                         
-                        <? php
-                        foreach ($_SESSION['cart'] as $item) {
-                            if ($item['quantity'] != 0) {
-                                
-                            }
-                        }
+
 						
-                        ?>
+                        
                         <tr>
                                     <td data-th="Product">
                                         <div class="row">
