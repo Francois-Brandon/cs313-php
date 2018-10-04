@@ -65,7 +65,7 @@ include 'cart-actions.php';
                                     <td data-th=\"Quantity\">
                                         <input type=\"number\" class=\"form-control text-center\" value=\"1\">
                                     </td>
-                                    <td data-th=\"Subtotal\" class=\"text-center\">1.99</td>
+                                    <td data-th=\"Subtotal\" class=\"text-center\">$subtotal</td>
                                     <td class=\"actions\" data-th=\"\">
                                         <button class=\"btn btn-info btn-sm\"><i class=\"fa fa-refresh\"></i></button>
                                         <button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\"></i></button>								
@@ -80,7 +80,14 @@ include 'cart-actions.php';
         
 					<tfoot>
 						<tr class="visible-xs">
-							<td class="text-center"><strong>Total 1.99</strong></td>
+							<td class="text-center"><strong>
+                                <?php
+                                    foreach ($_SESSION['cart'] as $item) {
+                                        $total += $item['price'] * $item['quantity'];
+                                    }
+                                    echo $total;
+                                ?>
+                                </strong></td>
 						</tr>
 						<tr>
 							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
