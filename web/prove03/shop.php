@@ -2,17 +2,15 @@
 
     session_start();
 
-    $cart = array(
-        'disc1' => array('price' => 10, 'quantity' => 0, 'img' => 'https://placehold.it/150x80?text=IMAGE', 'name' => 'Disc 1'),
-        'disc2' => array('price' => 12, 'quantity' => 0, 'img' => 'https://placehold.it/150x80?text=IMAGE', 'name' => 'Disc 2')
-    );
+    if (empty($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
 
-    if ($_SESSION["activeSession"] != true) {
-        $_SESSION["activeSession"] = true;
-        $_SESSION["cart"] = $cart;
-    } 
-    if (isset($_POST)) {
-        $_SESSION["cart"][key($_POST)]["quantity"]++;
+    require 'cart-actions.php';
+
+    $cartCount = 0;
+    foreach($_SESSION['cart'] as $item) {
+        $cartCount +=$item;
     }
 
 ?>
@@ -66,21 +64,21 @@
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #1</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><input type='submit' name='disc1' class='btn btn-primary mt-auto' value='Add to cart'></div>
+        <div class="panel-footer"><a href='shop.php?id=1?action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #2</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=2'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=2?action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #3</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=3'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=3?action=add'>Add to cart</a></div>
       </div>
     </div>
   </div>
@@ -92,21 +90,21 @@
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #4</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=4'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=4?action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #5</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=5'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=5?action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #6</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=6'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=6?action=add'>Add to cart</a></div>
       </div>
     </div>
   </div>
