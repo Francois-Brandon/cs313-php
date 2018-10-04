@@ -2,9 +2,17 @@
 
     session_start();
 
+    include 'ChromePhp.php';
+
+    if (empty($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
 
 $id = $_GET['id'];
 $action = $_GET['action']; 
+
+ChromePhp::log($id);
+ChromePhp::log($action);
 
 switch($action) { 
 
