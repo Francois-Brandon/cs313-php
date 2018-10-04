@@ -6,16 +6,19 @@ $action = $_GET['action'];
 switch($action) { 
 
     case "add":
-        $_SESSION['cart'][$id]++; 
+        $_SESSION['cart'][$id]['quantity']++; 
     break;
 
     case "remove":
-        $_SESSION['cart'][$id]--;
-        if($_SESSION['cart'][$id] == 0) unset($_SESSION['cart'][$id]);
+        $_SESSION['cart'][$id]['quantity']--;
+        if($_SESSION['cart'][$id]['quantity'] < 0) $_SESSION['cart'][$id]['quantity'] = 0;
     break;
 
     case "empty":
-        unset($_SESSION['cart']); 
+        foreach ($_SESSION['cart'] as $item) {
+            $item['quantity'] = 0;
+        }
+
     break;
 
 }
