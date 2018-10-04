@@ -62,10 +62,21 @@ footer {
 
 .panel-footer {
     background-color: #96B545 !important;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     text-align: center;
     font-size: 1em;
     text-decoration: none;
+}
+
+.panel-footer a {
+    background-color: #7EBEA9 !important;
+    color: #FFFFFF !important;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 3px;
+    
 }
 
 footer {
