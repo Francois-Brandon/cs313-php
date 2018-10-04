@@ -24,7 +24,7 @@ include 'cart-actions.php';
 <body>
     
 
-
+<?php include 'header.php'; ?>
     
 <div class="container">
 	<table id="cart" class="table table-hover table-condensed">
@@ -60,7 +60,7 @@ include 'cart-actions.php';
                                     </td>
                                     <td data-th=\"Price\">$price</td>
                                     <td data-th=\"Quantity\">
-                                        <input type=\"number\" class=\"form-control text-center\" value=\"1\">
+                                        <input type=\"number\" class=\"form-control text-center\" value=\"$quantity\">
                                     </td>
                                     <td data-th=\"Subtotal\" class=\"text-center\">$subtotal</td>
                                     <td class=\"actions\" data-th=\"\">
@@ -77,14 +77,7 @@ include 'cart-actions.php';
         
 					<tfoot>
 						<tr class="visible-xs">
-							<td class="text-center"><strong>
-                                <?php
-                                    foreach ($_SESSION['cart'] as $item) {
-                                        $total += $item['price'] * $item['quantity'];
-                                    }
-                                    echo "Total $total";
-                                ?>
-                                </strong></td>
+							<td class="text-center"><strong>What is this</strong></td>
 						</tr>
 						<tr>
 							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
