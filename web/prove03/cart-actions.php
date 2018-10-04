@@ -4,6 +4,10 @@ $id = $_GET['id'];
 $action = $_GET['action']; 
 
 switch($action) { 
+        
+    case "empty":
+        $_SESSION['cart'][$id]['quantity'] = 0;
+    break;
 
     case "add":
         $_SESSION['cart'][$id]['quantity']++; 
@@ -14,9 +18,7 @@ switch($action) {
         if($_SESSION['cart'][$id]['quantity'] < 0) $_SESSION['cart'][$id]['quantity'] = 0;
     break;
 
-    case "empty":
-        $_SESSION['cart'][$id]['quantity'] = 0;
-    break;
+    
 
 }
 

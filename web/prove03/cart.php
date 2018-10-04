@@ -45,6 +45,7 @@ include 'cart-actions.php';
                         foreach ($_SESSION['cart'] as $item) {
                             if ($item['quantity'] != 0) {
                                 $name = $item['name'];
+                                $id = strtolower($item['name']);
                                 $price = $item['price'];
                                 $img = $item['img'];
                                 $quantity = $item['quantity'];
