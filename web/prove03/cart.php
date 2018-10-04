@@ -3,6 +3,11 @@ session_start();
 
 include 'cart-actions.php';
 
+    $cartCount = 0;
+    foreach($_SESSION['cart'] as $item) {
+        $cartCount += $item['quantity']; 
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
