@@ -15,10 +15,7 @@ switch($action) {
     break;
 
     case "empty":
-        foreach ($_SESSION['cart'] as $item) {
-            $item['quantity'] = 0;
-        }
-
+        $_SESSION['cart'][$id]['quantity'] = 0;
     break;
 
 }

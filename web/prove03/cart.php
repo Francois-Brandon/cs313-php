@@ -62,7 +62,7 @@ include 'cart-actions.php';
                                     <td data-th=\"Quantity\">$quantity</td>
                                     <td data-th=\"Subtotal\" class=\"text-center\">$subtotal</td>
                                     <td class=\"actions\" data-th=\"\">
-                                        <a  href=\"cart.php?id=0&action=empty\" class=\"\"><i class=\"fa fa-trash-o\"></i></a>								
+                                        <a  href=\"cart.php?id=$item&action=empty\" class=\"\"><i class=\"fa fa-trash-o\"></i></a>								
                                     </td>
                                 </tr>";
                             }
@@ -80,6 +80,7 @@ include 'cart-actions.php';
 							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
 							<td class="hidden-xs text-center"><strong><?php
+                                    $total = 0;
                                     foreach ($_SESSION['cart'] as $item) {
                                         $total += $item['price'] * $item['quantity'];
                                     }
