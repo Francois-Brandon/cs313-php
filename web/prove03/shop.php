@@ -81,22 +81,22 @@ switch($action) {
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #1</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=1&action=add'>Add to cart</a></div>
+        <div class="panel-body"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #2</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=2&action=add'>Add to cart</a></div>
+        <div class="panel-body"><img src="images/Star-Boss.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><a href='shop.php?id=boss&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #3</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=3&action=add'>Add to cart</a></div>
+        <div class="panel-body"><img src="images/Star-Colossus.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><a href='shop.php?id=colossus&action=add'>Add to cart</a></div>
       </div>
     </div>
   </div>
@@ -107,22 +107,22 @@ switch($action) {
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #4</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=4&action=add'>Add to cart</a></div>
+        <div class="panel-body"><img src="images/Star-Daedalus.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><a href='shop.php?id=daedalus&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #5</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=5&action=add'>Add to cart</a></div>
+        <div class="panel-body"><img src="images/Star-Orc.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><a href='shop.php?id=orc&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #6</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=6&action=add'>Add to cart</a></div>
+        <div class="panel-body"><img src="images/Star-Valkyrie.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><a href='shop.php?id=valkyrie&action=add'>Add to cart</a></div>
       </div>
     </div>
   </div>
