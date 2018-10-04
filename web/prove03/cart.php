@@ -44,7 +44,12 @@ include 'cart-actions.php';
                         <? php
                         foreach ($_SESSION['cart'] as $item) {
                             if ($item['quantity'] != 0) {
-                                /*<tr>
+                                
+                            }
+                        }
+						
+                        ?>
+                        <tr>
                                     <td data-th="Product">
                                         <div class="row">
                                             <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
@@ -63,11 +68,7 @@ include 'cart-actions.php';
                                         <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
                                         <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
                                     </td>
-                                </tr>*/
-                            }
-                        }
-						
-                        ?>
+                                </tr>
 					</tbody>
         
 					<tfoot>
