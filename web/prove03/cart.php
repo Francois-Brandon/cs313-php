@@ -24,7 +24,8 @@ include 'cart-actions.php';
 <body>
     
 
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+    print_r($_SESSION);?>
     
 <div class="container">
 	<table id="cart" class="table table-hover table-condensed">
