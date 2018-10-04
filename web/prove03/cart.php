@@ -59,13 +59,10 @@ include 'cart-actions.php';
                                         </div>
                                     </td>
                                     <td data-th=\"Price\">$price</td>
-                                    <td data-th=\"Quantity\">
-                                        <input type=\"number\" class=\"form-control text-center\" value=\"$quantity\">
-                                    </td>
+                                    <td data-th=\"Quantity\">$quantity</td>
                                     <td data-th=\"Subtotal\" class=\"text-center\">$subtotal</td>
                                     <td class=\"actions\" data-th=\"\">
-                                        <button class=\"btn btn-info btn-sm\"><i class=\"fa fa-refresh\"></i></button>
-                                        <button class=\"btn btn-danger btn-sm\"><i class=\"fa fa-trash-o\"></i></button>								
+                                        <a  href=\"cart.php?id=0&action=empty\" class=\"\"><i class=\"fa fa-trash-o\"></i></a>								
                                     </td>
                                 </tr>";
                             }
