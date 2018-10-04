@@ -1,36 +1,19 @@
 <?php
 
-function initializeCart() {
     session_start();
-    if (empty($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
+
+    $cart = array(
+        'disc1' => array('price' => 10, 'quantity' => 0, 'img' => 'https://placehold.it/150x80?text=IMAGE', 'name' => 'Disc 1'),
+        'disc2' => array('price' => 12, 'quantity' => 0, 'img' => 'https://placehold.it/150x80?text=IMAGE', 'name' => 'Disc 2')
+    );
+
+    if ($_SESSION["activeSession"] != true) {
+        $_SESSION["activeSession"] = true;
+        $_SESSION["cart"] = $cart;
+    } 
+    if (isset($_POST)) {
+        $_SESSION["cart"][key($_POST)]["quantity"]++;
     }
-}
-
-function addToCart($id) {
-    if (isset($_SESSION['cart'][$id])) {
-        $_SESSION['cart'][$id] += 1;
-    }
-    else {
-        $_SESSION['cart'][$id] = 1;
-    }
-}
-
-function getCartCount() {
-    $count = 0;
-    foreach($_SESSION['cart'] as $item) {
-        $count +=$item;
-    }
-    return $count;
-}
-
-initializeCart();
-
-if (isset($_GET['id'])) {
-    addToCart($_GET['id']);
-}
-
-$cartCount = getCartCount();
 
 ?>
 
@@ -83,7 +66,7 @@ $cartCount = getCartCount();
       <div class="panel panel-primary">
         <div class="panel-heading">Disc #1</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='shop.php?id=1'>Add to cart</a></div>
+        <div class="panel-footer"><input type='submit' name='disc1' class='btn btn-primary mt-auto' value='Add to cart'></div>
       </div>
     </div>
     <div class="col-sm-4"> 
