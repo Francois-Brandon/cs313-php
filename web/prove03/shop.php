@@ -47,7 +47,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Archon - $10.99</div>
-        <div class="panel-body"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-body"><a data-toggle="modal" href="#myModal"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
         <div class="panel-footer"><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
       </div>
     </div>
@@ -93,6 +93,27 @@
     </div>
   </div>
 </div><br><br>
+    
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <footer class="container-fluid text-center">
   <p>Copyright &copy;2018 Brandon Francois</p>
