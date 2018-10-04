@@ -46,23 +46,23 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">Archon</div>
+        <div class="panel-heading">Archon - $10.99</div>
         <div class="panel-body"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$10.99 <a href='shop.php?id=archon&action=add'>Add to cart</a></div>
+        <div class="panel-footer"><a href='#'>Info</a><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">Boss</div>
+        <div class="panel-heading">Boss - $12.99</div>
         <div class="panel-body"><img src="images/Star-Boss.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$12.99 <a href='shop.php?id=boss&action=add'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=boss&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">Colossus</div>
+        <div class="panel-heading">Colossus - $14.99</div>
         <div class="panel-body"><img src="images/Star-Colossus.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$14.99 <a href='shop.php?id=colossus&action=add'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=colossus&action=add'>Add to cart</a></div>
       </div>
     </div>
   </div>
@@ -72,23 +72,23 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">Daedalus</div>
+        <div class="panel-heading">Daedalus - $12.99</div>
         <div class="panel-body"><img src="images/Star-Daedalus.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$12.99 <a href='shop.php?id=daedalus&action=add'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=daedalus&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">Orc</div>
+        <div class="panel-heading">Orc - $10.99</div>
         <div class="panel-body"><img src="images/Star-Orc.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$10.99 <a href='shop.php?id=orc&action=add'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=orc&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">Valkyrie</div>
+        <div class="panel-heading">Valkyrie - $12.99</div>
         <div class="panel-body"><img src="images/Star-Valkyrie.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$12.99 <a href='shop.php?id=valkyrie&action=add'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=valkyrie&action=add'>Add to cart</a></div>
       </div>
     </div>
   </div>
