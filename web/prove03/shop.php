@@ -4,13 +4,13 @@
 
     if (empty($_SESSION['cart'])) {
         $_SESSION['cart'] = array(
-        'archon' => array('price' => 10, 'quantity' => 0, 'img' => 'images/Star-Archon.jpg', 'name' => 'Archon'),
-        'boss' => array('price' => 12, 'quantity' => 0, 'img' => 'images/Star-Boss.jpg', 'name' => 'Boss'),
-        'colossus' => array('price' => 14, 'quantity' => 0, 'img' => 'images/Star-Colossus.jpg', 'name' => 'Colossus'),
-        'daedalus' => array('price' => 12, 'quantity' => 0, 'img' => 'images/Star-Daedalus.jpg', 'name' => 'Daedalus'),
-        'orc' => array('price' => 10, 'quantity' => 0, 'img' => 'images/Star-Orc.jpg', 'name' => 'Orc'),
-        'valkyrie' => array('price' => 12, 'quantity' => 0, 'img' => 'images/Star-Valkyrie.jpg', 'name' => 'Valkyrie')
-    );
+        'archon' => array('price' => 10.99, 'quantity' => 0, 'img' => 'images/Star-Archon.jpg', 'name' => 'Archon'),
+        'boss' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Boss.jpg', 'name' => 'Boss'),
+        'colossus' => array('price' => 14.99, 'quantity' => 0, 'img' => 'images/Star-Colossus.jpg', 'name' => 'Colossus'),
+        'daedalus' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Daedalus.jpg', 'name' => 'Daedalus'),
+        'orc' => array('price' => 10.99, 'quantity' => 0, 'img' => 'images/Star-Orc.jpg', 'name' => 'Orc'),
+        'valkyrie' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Valkyrie.jpg', 'name' => 'Valkyrie')
+        );
     }
 
     $id = $_GET['id'];
