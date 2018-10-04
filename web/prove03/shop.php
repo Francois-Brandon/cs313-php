@@ -2,9 +2,6 @@
 
     session_start();
 
-    if (empty($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
-    }
 
 $id = $_GET['id'];
 $action = $_GET['action']; 
