@@ -48,7 +48,7 @@
       <div class="panel panel-primary">
         <div class="panel-heading">Archon - $10.99</div>
         <div class="panel-body"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><a href='#'>Info</a><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
+        <div class="panel-footer"><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
