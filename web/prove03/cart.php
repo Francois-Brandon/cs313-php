@@ -62,7 +62,7 @@ include 'cart-actions.php';
                                     <td data-th=\"Quantity\">$quantity</td>
                                     <td data-th=\"Subtotal\" class=\"text-center\">$subtotal</td>
                                     <td class=\"actions\" data-th=\"\">
-                                        <a  href=\"cart.php?id=$item&action=empty\" class=\"\"><i class=\"fa fa-trash-o\"></i></a>								
+                                        <a  href=\"cart.php?id=$name&action=empty\" class=\"\"><i class=\"fa fa-trash-o\"></i></a>								
                                     </td>
                                 </tr>";
                             }
