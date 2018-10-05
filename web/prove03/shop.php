@@ -7,7 +7,7 @@
         'archon' => array('price' => 10.99, 'quantity' => 0, 'img' => 'images/Star-Archon.jpg', 'name' => 'Archon', 'description' => 'The Archon is a new Speed 11 Distance Driver that blends the graceful long turn of the Katana with the smooth fade of a Wraith. It has been described as a longer Valkyrie. This is the disc for players looking to master their game and rule the course.'),
         'boss' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Boss.jpg', 'name' => 'Boss', 'description' => 'This is a fast stable driver that can handle full power throws and moderate headwinds. Advanced players and sidearm throwers will appreciate the dependable stability. The Boss has a slight high speed turn to help maximize distance with a predictable fade.'),
         'colossus' => array('price' => 14.99, 'quantity' => 0, 'img' => 'images/Star-Colossus.jpg', 'name' => 'Colossus', 'description' => 'The Colossus is a max distance driver with predictable high speed turn and reliable fade. Although it has a wide rim, it is also relatively easy to hold and throw both backhand and forehand. If you\'ve wanted to throw a really fast driver, but couldn\'t quite handle the wide rim, try the Colossus.'),
-        'daedalus' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Daedalus.jpg', 'name' => 'Daedalus', 'description' => ''),
+        'daedalus' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Daedalus.jpg', 'name' => 'Daedalus', 'description' => 'The Daedalus has wings to fly far down the fairway. The Daedalus is a new maximum downwind distance driver crafted for less powerful players, and doubles as a long distance roller for more advanced players. The Daedalus likes to be thrown low, make sure it doesn\'t soar too close to the sun.'),
         'orc' => array('price' => 10.99, 'quantity' => 0, 'img' => 'images/Star-Orc.jpg', 'name' => 'Orc', 'description' => 'The Orc is one of our most popular, straight flying distance drivers. It combines speed with accuracy for very long range, predictable flights. Great for straight ahead power shots and long hyzer shots. Suitable for powerful throwers, but still manageable by beginners in lighter weights.'),
         'valkyrie' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Valkyrie.jpg', 'name' => 'Valkyrie', 'description' => 'In lighter weights gives new players extra distance. Lighter weights also give players extreme range when thrown downwind, while maximum weights can give excellent upwind distance. The Valkyrie’s high speed turn and flight characteristics make it great choice for long range turnover shots and rollers.')
         );
@@ -99,6 +99,7 @@
         foreach($_SESSION['cart'] as $item) {
             $name = $item['name'];
             $description = $item['description'];
+            $img = $item['img'];
             
             echo "<div id=\"$name-modal\" class=\"modal fade\" role=\"dialog\">
                 <div class=\"modal-dialog\">
@@ -109,6 +110,7 @@
                             <h4 class=\"modal-title\">$name</h4>
                         </div>
                         <div class=\"modal-body\">
+                            <img src=\"$img\" class=\"img-responsive\" style=\"width:100%\" alt=\"$name\">
                             <p>$description</p>
                         </div>
                         <div class=\"modal-footer\">
