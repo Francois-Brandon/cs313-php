@@ -89,6 +89,12 @@ footer {
     color: #FFFFFF;
 }
 
+.btn-continue {
+    background-color: #7EBEA9;
+    border-color: #7EBEA9;
+    color: #FFFFFF;
+}
+
 .panel-body:hover {
     opacity: 0.5;
 }

@@ -78,7 +78,7 @@ include 'cart-actions.php';
 							<td class="text-center"><strong>What is this</strong></td>
 						</tr>
 						<tr>
-							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+							<td><a href="shop.php" class="btn btn-continue"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
 							<td class="hidden-xs text-center"><strong><?php
                                     $total = 0.00;
@@ -87,11 +87,15 @@ include 'cart-actions.php';
                                     }
                                     echo "Total $$total";
                                 ?></strong></td>
-							<td><a href="#" class="btn btn-success btn-checkout">Checkout <i class="fa fa-angle-right"></i></a></td>
+							<td><a href="checkout.php" class="btn btn-success btn-checkout">Checkout <i class="fa fa-angle-right"></i></a></td>
 						</tr>
 					</tfoot>
 				</table>
 </div>
+    
+<footer class="container-fluid text-center">
+  <p>Copyright &copy;2018 Brandon Francois</p>
+</footer>
 
 </body>
 </html>
