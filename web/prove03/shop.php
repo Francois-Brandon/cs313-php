@@ -48,11 +48,17 @@
           <div class="panel-body"><a data-toggle="modal" href="#Archon-modal"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
             <div class="panel-footer">
 <!--                <a href='shop.php?id=archon&action=add'>Add to cart</a>-->
-                <input type="button" name="Archon" value="Add to cart">
+                <input type="button" name="archon" value="Add to cart">
                 <?php 
-                    if (isset($_POST['Archon'])) {
-                        $_SESSION['cart']['archon']['quantity']++;
+                    
+                    if (isset($_POST['archon'])) {
+                        $_SESSION['cart']['archon']['quantity'] += 1;
                     }
+                
+                $cartCount = 0;
+    foreach($_SESSION['cart'] as $item) {
+        $cartCount += $item['quantity'];
+    }
                 ?>
             </div>
       </div>
