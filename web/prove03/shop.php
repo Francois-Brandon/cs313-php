@@ -46,7 +46,14 @@
       <div class="panel panel-primary">
         <div class="panel-heading">Archon - $10.99</div>
           <div class="panel-body"><a data-toggle="modal" href="#Archon-modal"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
-            <div class="panel-footer"><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
+            <div class="panel-footer">
+<!--                <a href='shop.php?id=archon&action=add'>Add to cart</a>-->
+                <input type="button" name="Archon" value="Add to cart">
+                <?php 
+                    if (isset($_POST["Archon"])) {
+                        $_SESSION['cart']['Archon']['quantity']++;
+                    }
+            </div>
       </div>
     </div>
     <div class="col-sm-4"> 
