@@ -53,6 +53,7 @@
                     if (isset($_POST["Archon"])) {
                         $_SESSION['cart']['Archon']['quantity']++;
                     }
+                ?>
             </div>
       </div>
     </div>
