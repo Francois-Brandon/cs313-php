@@ -46,21 +46,7 @@
       <div class="panel panel-primary">
         <div class="panel-heading">Archon - $10.99</div>
           <div class="panel-body"><a data-toggle="modal" href="#Archon-modal"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
-            <div class="panel-footer">
-<!--                <a href='shop.php?id=archon&action=add'>Add to cart</a>-->
-                <button type="submit" name="archon" value="Add to cart"></button>
-                <?php 
-                    
-                    if (isset($_POST['archon'])) {
-                        $_SESSION['cart']['archon']['quantity'] += 1;
-                    }
-                
-                $cartCount = 0;
-    foreach($_SESSION['cart'] as $item) {
-        $cartCount += $item['quantity'];
-    }
-                ?>
-            </div>
+            <div class="panel-footer"><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
       </div>
     </div>
     <div class="col-sm-4"> 
