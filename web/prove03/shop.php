@@ -51,7 +51,7 @@
                 <input type="button" name="Archon" value="Add to cart">
                 <?php 
                     if (isset($_POST['Archon'])) {
-                        $_SESSION['cart']['Archon']['quantity']++;
+                        $_SESSION['cart']['archon']['quantity']++;
                     }
                 ?>
             </div>
