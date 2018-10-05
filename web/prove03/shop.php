@@ -50,7 +50,7 @@
 <!--                <a href='shop.php?id=archon&action=add'>Add to cart</a>-->
                 <input type="button" name="Archon" value="Add to cart">
                 <?php 
-                    if (isset($_POST["Archon"])) {
+                    if (isset($_POST['Archon'])) {
                         $_SESSION['cart']['Archon']['quantity']++;
                     }
                 ?>
