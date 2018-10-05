@@ -12,9 +12,10 @@
         'valkyrie' => array('price' => 12.99, 'quantity' => 0, 'img' => 'images/Star-Valkyrie.jpg', 'name' => 'Valkyrie', 'description' => 'In lighter weights gives new players extra distance. Lighter weights also give players extreme range when thrown downwind, while maximum weights can give excellent upwind distance. The Valkyrie’s high speed turn and flight characteristics make it great choice for long range turnover shots and rollers.')
         );
     }
-
-    $id = $_GET['id'];
-    $action = $_GET['action']; 
+    
+if (isset($_POST)) {
+        $_SESSION["cart"][key($_POST)]["quantity"]++;
+    }
 
     include 'cart-actions.php';
 
@@ -48,7 +49,10 @@
       <div class="panel panel-primary">
         <div class="panel-heading">Archon - $10.99</div>
           <div class="panel-body"><a data-toggle="modal" href="#Archon-modal"><img src="images/Star-Archon.jpg" class="img-responsive" style="width:100%" alt="Image"></a></div>
-        <div class="panel-footer"><a href='shop.php?id=archon&action=add'>Add to cart</a></div>
+            <div class="panel-footer">
+<!--                <a href='shop.php?id=archon&action=add'>Add to cart</a>-->
+                <input type="submit" name="Archon" value="Add to cart">
+            </div>
       </div>
     </div>
     <div class="col-sm-4"> 
