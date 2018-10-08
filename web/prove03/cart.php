@@ -43,32 +43,37 @@ $_SESSION['total'] = 0;
                         
 
 						<?php
-                        foreach ($_SESSION['cart'] as $item) {
-                            if ($item['quantity'] != 0) {
-                                $name = $item['name'];
-                                $id = strtolower($item['name']);
-                                $price = $item['price'];
-                                $img = $item['img'];
-                                $quantity = $item['quantity'];
-                                $subtotal = $price * $quantity;
-                                
-                                echo "<tr>
-                                    <td data-th=\"Product\">
-                                        <div class=\"row\">
-                                            <div class=\"col-sm-2 hidden-xs\"><img src=\"$img\" alt=\"...\" class=\"img-responsive\"/></div>
-                                            <div class=\"col-sm-10\">
-                                                <h4 class=\"nomargin\">$name</h4>
-                                                
+                        if ($cartCount == 0) {
+                            echo "<h1>Cart is empty</h1>";
+                        }
+                        else {
+                            foreach ($_SESSION['cart'] as $item) {
+                                if ($item['quantity'] != 0) {
+                                    $name = $item['name'];
+                                    $id = strtolower($item['name']);
+                                    $price = $item['price'];
+                                    $img = $item['img'];
+                                    $quantity = $item['quantity'];
+                                    $subtotal = $price * $quantity;
+
+                                    echo "<tr>
+                                        <td data-th=\"Product\">
+                                            <div class=\"row\">
+                                                <div class=\"col-sm-2 hidden-xs\"><img src=\"$img\" alt=\"...\" class=\"img-responsive\"/></div>
+                                                <div class=\"col-sm-10\">
+                                                    <h4 class=\"nomargin\">$name</h4>
+
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td data-th=\"Price\">$price</td>
-                                    <td data-th=\"Quantity\">$quantity</td>
-                                    <td data-th=\"Subtotal\" class=\"text-center\">$subtotal</td>
-                                    <td class=\"actions\" data-th=\"\">
-                                        <a  href=\"cart.php?id=$id&action=empty\" class=\"\"><i class=\"fa fa-trash-o\"></i></a>								
-                                    </td>
-                                </tr>";
+                                        </td>
+                                        <td data-th=\"Price\">$price</td>
+                                        <td data-th=\"Quantity\">$quantity</td>
+                                        <td data-th=\"Subtotal\" class=\"text-center\">$subtotal</td>
+                                        <td class=\"actions\" data-th=\"\">
+                                            <a  href=\"cart.php?id=$id&action=empty\" class=\"\"><i class=\"fa fa-trash-o\"></i></a>								
+                                        </td>
+                                    </tr>";
+                                }
                             }
                         }
                         ?>
@@ -91,7 +96,13 @@ $_SESSION['total'] = 0;
                                     $_SESSION['total'] = $total;
                                     echo "Total $$total";
                                 ?></strong></td>
-							<td><a href="checkout.php" class="btn btn-success btn-checkout">Checkout <i class="fa fa-angle-right"></i></a></td>
+							<td>
+                                <?php 
+                                    if ($cartCount != 0) {
+                                        echo "<a href=\"checkout.php\" class=\"btn btn-success btn-checkout\"> <i class=\"fa fa-angle-right\"></i></a>";
+                                    }
+                                ?>
+                            </td>
 						</tr>
 					</tfoot>
 				</table>
