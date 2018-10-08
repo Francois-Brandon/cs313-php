@@ -34,7 +34,7 @@ include 'cart-actions.php';
 
 	<div class="form-group">
 		<label for="full_name_id" class="control-label">Full Name</label>
-		<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
+		<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Doe">
 	</div>	
 
 	<div class="form-group">
@@ -49,7 +49,7 @@ include 'cart-actions.php';
 
 	<div class="form-group">
 		<label for="city_id" class="control-label">City</label>
-		<input type="text" class="form-control" id="city_id" name="city" placeholder="Smallville">
+		<input type="text" class="form-control" id="city_id" name="city" placeholder="Rexburg">
 	</div>									
 							
 	<div class="form-group"> 
@@ -115,7 +115,7 @@ include 'cart-actions.php';
 	</div>		
 	
 	<div class="form-group"> 
-		<button type="submit" class="btn btn-primary">Place Order</button>
+		<button type="submit" class="btn btn-checkout">Place Order</button>
 	</div>     
 	
 </form>			

@@ -58,7 +58,7 @@ $_SESSION['total'] = 0;
                                             <div class=\"col-sm-2 hidden-xs\"><img src=\"$img\" alt=\"...\" class=\"img-responsive\"/></div>
                                             <div class=\"col-sm-10\">
                                                 <h4 class=\"nomargin\">$name</h4>
-                                                <p>Description</p>
+                                                
                                             </div>
                                         </div>
                                     </td>
