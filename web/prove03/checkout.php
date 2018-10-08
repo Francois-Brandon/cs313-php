@@ -34,27 +34,27 @@ include 'cart-actions.php';
 
 	<div class="form-group">
 		<label for="full_name_id" class="control-label">Full Name</label>
-		<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Doe">
+		<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Doe" required>
 	</div>	
 
 	<div class="form-group">
 		<label for="street1_id" class="control-label">Street Address 1</label>
-		<input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
+		<input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o" required>
 	</div>					
 							
 	<div class="form-group">
 		<label for="street2_id" class="control-label">Street Address 2</label>
-		<input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+		<input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc." required>
 	</div>	
 
 	<div class="form-group">
 		<label for="city_id" class="control-label">City</label>
-		<input type="text" class="form-control" id="city_id" name="city" placeholder="Rexburg">
+		<input type="text" class="form-control" id="city_id" name="city" placeholder="Rexburg" required>
 	</div>									
 							
 	<div class="form-group"> 
 		<label for="state_id" class="control-label">State</label>
-		<select class="form-control" id="state_id">
+		<select class="form-control" id="state_id" name="state">
 			<option value="AL">Alabama</option>
 			<option value="AK">Alaska</option>
 			<option value="AZ">Arizona</option>
