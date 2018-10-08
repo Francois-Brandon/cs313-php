@@ -3,6 +3,8 @@ session_start();
 
 include 'cart-actions.php';
 
+$_SESSION['total'] = 0;
+
     $cartCount = 0;
     foreach($_SESSION['cart'] as $item) {
         $cartCount += $item['quantity']; 
@@ -49,6 +51,7 @@ include 'cart-actions.php';
                                 $img = $item['img'];
                                 $quantity = $item['quantity'];
                                 $subtotal = $price * $quantity;
+                                $_SESSION['total'] = $subtotal;
                                 echo "<tr>
                                     <td data-th=\"Product\">
                                         <div class=\"row\">
