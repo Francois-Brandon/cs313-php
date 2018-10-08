@@ -27,7 +27,7 @@ include 'cart-actions.php';
 <?php include 'header.php';?>
     
     <h1>Total: $<?php $total = $_SESSION['total'];
-        echo $total;</h1>
+        echo $total; ?></h1>
     
     <form method="post" action="confirmation.php">
 
