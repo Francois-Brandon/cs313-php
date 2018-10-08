@@ -77,3 +77,5 @@ $cartCount = 0;
 
 </body>
 </html>
+
+<?php session_unset(); ?>
