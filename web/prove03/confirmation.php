@@ -21,25 +21,28 @@ $cartCount = 0;
 </head>
 <body>
     
-
 <?php include 'header.php';?>
     
-
-    
 <div class="container">
-    <h1>Thank you for your order!</h1>
+    
+    <h1>Thank you for your order!</h1><br>
+    
     <div class="row">
+        
         <div class="col-sm-4">
-            <?php
-                $name = htmlspecialchars($_POST['full-name']);
-                $address1 = htmlspecialchars($_POST['street1']);
-                $address2 = htmlspecialchars($_POST['street2']);
-                $city = htmlspecialchars($_POST['city']);
-                $state = htmlspecialchars($_POST['state']);
-                $zip = htmlspecialchars($_POST['zip']);
-            ?>
-            <p><?php echo htmlspecialchars($_POST['full-name']); ?></p>
+            <p><?php echo htmlspecialchars($_POST['full_name']); ?></p>
+            <p><?php echo htmlspecialchars($_POST['street1']); ?></p>
+            <p><?php echo htmlspecialchars($_POST['street2']); ?></p>
+            <p>
+                <?php 
+                    $city = htmlspecialchars($_POST['city']);
+                    $state = htmlspecialchars($_POST['state']);
+                    $zip = htmlspecialchars($_POST['zip']);
+                    echo "$city, $state $zip";
+                ?>
+            </p>
         </div>
+        
         <div class="col-sm-4">
             <?php
                 foreach ($_SESSION['cart'] as $item) {
@@ -56,6 +59,11 @@ $cartCount = 0;
                 }
             ?>
         </div>
+        
+        <div class="col-sm-4">
+            <p>Total: $<?php echo $_SESSION['total'];?></p>
+        </div>
+        
     </div>
         
 </div>
