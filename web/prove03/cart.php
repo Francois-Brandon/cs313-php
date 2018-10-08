@@ -99,7 +99,7 @@ $_SESSION['total'] = 0;
 							<td>
                                 <?php 
                                     if ($cartCount != 0) {
-                                        echo "<a href=\"checkout.php\" class=\"btn btn-success btn-checkout\"> <i class=\"fa fa-angle-right\"></i></a>";
+                                        echo "<a href=\"checkout.php\" class=\"btn btn-success btn-checkout\">Checkout<i class=\"fa fa-angle-right\"></i></a>";
                                     }
                                 ?>
                             </td>
