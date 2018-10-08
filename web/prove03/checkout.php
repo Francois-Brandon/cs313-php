@@ -26,6 +26,7 @@ include 'cart-actions.php';
 
 <?php include 'header.php';?>
     
+    <div class="container">
     <h1>Total: $<?php $total = $_SESSION['total'];
         echo $total; ?></h1>
     
@@ -118,7 +119,7 @@ include 'cart-actions.php';
 	</div>     
 	
 </form>			
-    
+    </div>
     
     
     

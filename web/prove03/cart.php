@@ -51,7 +51,7 @@ $_SESSION['total'] = 0;
                                 $img = $item['img'];
                                 $quantity = $item['quantity'];
                                 $subtotal = $price * $quantity;
-                                $_SESSION['total'] = $subtotal;
+                                
                                 echo "<tr>
                                     <td data-th=\"Product\">
                                         <div class=\"row\">
@@ -88,6 +88,7 @@ $_SESSION['total'] = 0;
                                     foreach ($_SESSION['cart'] as $item) {
                                         $total += $item['price'] * $item['quantity'];
                                     }
+                                    $_SESSION['total'] = $total;
                                     echo "Total $$total";
                                 ?></strong></td>
 							<td><a href="checkout.php" class="btn btn-success btn-checkout">Checkout <i class="fa fa-angle-right"></i></a></td>
