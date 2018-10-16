@@ -38,7 +38,15 @@
           echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"';
           echo '<br/>';
         }
-    ?>
+    ?><br>
+    
+    <form action="result.php" method="post">
+        
+        <label for="book">Enter Book:</label>
+        <input type="text" name="book"><br>
+        <button type="submit">Search</button>
+    
+    </form>
     
 </body>
 </html>
