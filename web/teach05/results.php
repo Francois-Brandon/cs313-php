@@ -39,11 +39,7 @@
     $stmt->execute(array(':book' => book));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-        foreach ($rows)
-        {
-          echo '<p><strong>' . $rows['book'] . ' ' . $rows['chapter'] . ':' . $rows['verse'] . '</strong> - "' . $rows['content'] . '"';
-          echo '<br/>';
-        }
+        
     ?>
     
 
