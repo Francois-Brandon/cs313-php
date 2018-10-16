@@ -35,7 +35,7 @@
     <?php
     $book = $_POST['book'];
     
-        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book LIKE '%" . $book .  "%' ") as $row)
+        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = ' . $book) as $row)
         {
           echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"';
           echo '<br/>';
