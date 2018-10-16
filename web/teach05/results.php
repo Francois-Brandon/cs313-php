@@ -35,11 +35,11 @@
     <?php
     $book = $_POST['book'];
     
-    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book=:book');
-    $stmt->execute(array(':book' => book));
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        
+        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book LIKE '%" . $book .  "%' ") as $row)
+        {
+          echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"';
+          echo '<br/>';
+        }
     ?>
     
 
