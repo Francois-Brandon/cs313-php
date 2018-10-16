@@ -33,20 +33,16 @@
     <h1>Scripture Resources</h1>
     
     <?php
-        foreach ($db->query('SELECT * FROM scriptures') as $row)
+        $book = $_GET['id'];
+    
+        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE id = \'' . $id . '\'') as $row)
         {
           echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"';
           echo '</p>';
         }
-    ?><br>
+    ?>
     
-    <form action="results.php" method="post">
-        
-        <label for="book">Enter Book:</label>
-        <input type="text" name="book"><br>
-        <button type="submit">Search</button>
-    
-    </form>
+
     
 </body>
 </html>

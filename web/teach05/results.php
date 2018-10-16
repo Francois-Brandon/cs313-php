@@ -37,7 +37,7 @@
     
         foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = \'' . $book . '\'') as $row)
         {
-          echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"';
+          echo '<a href=\"details.php?id=' . $id . '\><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong></a>';
           echo '<br/>';
         }
     ?>
