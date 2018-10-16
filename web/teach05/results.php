@@ -35,9 +35,9 @@
     <?php
     $book = $_POST['book'];
     
-        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = \'' . $book . '\'') as $row)
+        foreach ($db->query('SELECT * FROM scriptures WHERE book = \'' . $book . '\'') as $row)
         {
-          echo '<a href=\"details.php?id=' . $id . '\><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong></a>';
+          echo '<a href="details.php?id=' . $id . '><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong></a>';
           echo '<br/>';
         }
     ?>
