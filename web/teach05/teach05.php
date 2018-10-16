@@ -40,7 +40,7 @@
         }
     ?><br>
     
-    <form action="result.php" method="post">
+    <form action="results.php" method="post">
         
         <label for="book">Enter Book:</label>
         <input type="text" name="book"><br>
