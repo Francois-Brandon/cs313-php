@@ -1,28 +1,4 @@
-<?php
-
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-
-      $dbOpts = parse_url($dbUrl);
-
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch (PDOException $ex)
-    {
-      echo 'Error!: ' . $ex->getMessage();
-      die();
-    }
-
-?>
+<?php require 'res/db.php'; ?>
 
 <html lang="en">
 <head>
@@ -37,7 +13,7 @@
 </head>
 <body>
     
-<?php include 'res/nav.php'; ?>
+<?php require 'res/nav.php'; ?>
 
 <div class="container search-container">
     <div class="row search-row">
@@ -50,17 +26,15 @@
     </div>
 </div>
     
-<!--    <?php
-        foreach ($db->query('SELECT * FROM scriptures') as $row)
-        {
-          echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "' . $row['content'] . '"';
-          echo '</p>';
-        }
-    ?><br>-->
+   <?php
+        //foreach ($db->query('SELECT * FROM scriptures') as $row)
+        //{
+        //  echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> //- "' . $row['content'] . '"';
+        //  echo '</p>';
+        //}
+    ?>
     
-<footer class="container-fluid text-center page-footer">
-    <p>Copyright &copy;2018 Brandon Francois</p>
-</footer>
+<?php require 'res/footer.php'; ?>
     
 </body>
 </html>
