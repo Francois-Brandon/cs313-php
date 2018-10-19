@@ -108,6 +108,9 @@ body {
   border: none;
 }
 
+.recipe-container {
+    padding-top: 15%;
+}
 
 footer {
     position: fixed;
