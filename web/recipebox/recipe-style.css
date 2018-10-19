@@ -6,6 +6,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Special Elite', cursive;
 }
 
 .navbar-brand {
@@ -110,6 +111,26 @@ body {
 
 .recipe-container {
     padding-top: 15%;
+}
+
+.panel-heading {
+    background-color: #7EBEA9 !important;
+    border-color: #7EBEA9 !important;
+    opacity:0.9;
+}
+
+.panel-primary {
+    border-color: #7EBEA9 !important;
+    opacity:0.9;
+}
+
+.panel-footer {
+    background-color: #96B545 !important;
+    color: #FFFFFF !important;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    opacity:0.9;
 }
 
 footer {
