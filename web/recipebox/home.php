@@ -53,7 +53,7 @@
             echo '<div class="panel panel-primary">';
             echo '<div class="panel-heading">' . $row['recipe_name'] . '</div>';
             echo '<div class="panel-body">' . $row['recipe_body'] . '</div>';
-            echo '<div class="panel-footer"><a href=''>See More</a></div>';
+            echo '<div class="panel-footer"><a href=\'\#\'>See More</a></div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
