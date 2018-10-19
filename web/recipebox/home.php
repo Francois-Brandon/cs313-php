@@ -41,9 +41,9 @@
 
     
    <?php
-        foreach ($db->query('SELECT c.name, r.recipe_id, r.recipe_name, r.recipe_body FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
+        foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.recipe_body AS recipe_body FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
         {
-          echo '<p>' . $row['r.recipe_name'] . ' - ' . $row['r.recipe_body'];
+          echo '<p>' . $row['recipe_name'] . ' - ' . $row['recipe_body'];
           echo '</p>';
         }
     ?>
