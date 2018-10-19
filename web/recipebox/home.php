@@ -46,7 +46,7 @@
 
     
    <?php
-        foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.ingredients AS ingredients FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
+        foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.ingredients AS ingredients, r.directions AS directions FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
         {   
             $recipe_name = htmlspecialchars($row['recipe_name']);
             $recipe_id = htmlspecialchars($row['recipe_id']);
