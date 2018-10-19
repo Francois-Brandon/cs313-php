@@ -49,6 +49,7 @@
         foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.ingredients AS ingredients FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
         {   
             $recipe_name = htmlspecialchars($row['recipe_name']);
+            $recipe_id = htmlspecialchars($row['recipe_id']);
             $ingredients = htmlspecialchars($row['ingredients']);
             $directions = htmlspecialchars($row['directions']);
             
@@ -58,12 +59,12 @@
             echo '<div class="panel panel-primary">';
             echo '<div class="panel-heading">' . $recipe_name . '</div>';
             echo '<div class="panel-body">' . $ingredients . '</div>';
-            echo '<div class="panel-footer"><a href=\'\#' . $recipe_name . '-modal\'>See More</a></div>';
+            echo '<div class="panel-footer"><a href=\'\#' . $recipe_id . '-modal\'>See More</a></div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
             
-            echo "<div id=\"" . $recipe_name . "-modal\" class=\"modal fade\" role=\"dialog\">
+            echo "<div id=\"" . $recipe_id . "-modal\" class=\"modal fade\" role=\"dialog\">
                 <div class=\"modal-dialog\">
 
                     <div class=\"modal-content\">
