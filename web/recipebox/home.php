@@ -38,15 +38,29 @@
 <body>
     
 <?php require 'res/nav.php'; ?>
+    
+    
+<div class="container">    
+  
+
 
     
    <?php
         foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.recipe_body AS recipe_body FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
-        {
-          echo '<p>' . $row['recipe_name'] . ' - ' . $row['recipe_body'];
-          echo '</p>';
+        {   
+            echo '<div class="row">';
+            echo '<div class="col-sm-4">';
+            echo '<div class="panel panel-primary">';
+            echo '<div class="panel-heading">' . $row['recipe_name'] . '</div>';
+            echo '<div class="panel-body">' . $row['recipe_body'] . '</div>';
+            echo '<div class="panel-footer"><a href=''>See More</a></div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
         }
     ?>
+    
+    </div>
     
 <?php require 'res/footer.php'; ?>
     
