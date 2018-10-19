@@ -48,15 +48,41 @@
    <?php
         foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.ingredients AS ingredients FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
         {   
+            $recipe_name = htmlspecialchars($row['recipe_name']);
+            $ingredients = htmlspecialchars($row['ingredients']);
+            $directions = htmlspecialchars($row['directions']);
+            
+            
             echo '<div class="row">';
             echo '<div class="col-sm-4">';
             echo '<div class="panel panel-primary">';
-            echo '<div class="panel-heading">' . $row['recipe_name'] . '</div>';
-            echo '<div class="panel-body">' . $row['ingredients'] . '</div>';
-            echo '<div class="panel-footer"><a href=\'\#\'>See More</a></div>';
+            echo '<div class="panel-heading">'$recipe_name'</div>';
+            echo '<div class="panel-body">'$ingredients'</div>';
+            echo '<div class="panel-footer"><a href=\'\#'$recipe_name'-modal\'>See More</a></div>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
+            
+            echo "<div id=\"$recipe_name-modal\" class=\"modal fade\" role=\"dialog\">
+                <div class=\"modal-dialog\">
+
+                    <div class=\"modal-content\">
+                        <div class=\"modal-header\">
+                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                            <h4 class=\"modal-title\">$recipe_name</h4>
+                        </div>
+                        <div class=\"modal-body\">
+                            
+                            <p>$ingredients</p>
+                            <p>$directions</p>
+                        </div>
+                        <div class=\"modal-footer\">
+                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>";
         }
     ?>
     
