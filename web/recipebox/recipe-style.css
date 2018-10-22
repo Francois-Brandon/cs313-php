@@ -135,7 +135,7 @@ body {
 }
 
 .panel-extended {
-    padding: 0 15px;
+    padding: 0px 15px !important;
 }
 
 .panel-footer {
