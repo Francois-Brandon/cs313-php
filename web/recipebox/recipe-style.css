@@ -136,6 +136,7 @@ body {
 
 .panel-extended {
     height: auto !important;
+    padding: 0 15px;
 }
 
 .panel-footer {
