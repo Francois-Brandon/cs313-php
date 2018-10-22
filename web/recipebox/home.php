@@ -58,9 +58,9 @@
             $stmt->execute();
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
-            foreach ($rows)
+            foreach ($rows as $value)
             {
-                $ingredients += htmlspecialchars($rows['item']) . '<br>';
+                $ingredients += htmlspecialchars($value['item']) . '<br>';
             }
             
             
