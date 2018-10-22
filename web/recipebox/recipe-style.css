@@ -129,6 +129,15 @@ body {
     opacity:0.9;
 }
 
+.panel-body {
+    overflow: hidden;
+    height: 150px;
+}
+
+.panel-extended {
+    height: auto !important;
+}
+
 .panel-footer {
     background-color: #2d2d30 !important;
     color: #FFFFFF !important;
