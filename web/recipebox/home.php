@@ -41,7 +41,7 @@
     
     
 <div class="container recipe-container">    
-  
+  <div class="row">
 
 
     
@@ -64,7 +64,6 @@
             }
             
             
-            echo '<div class="row">';
             echo '<div class="col-sm-4">';
             echo '<div class="panel panel-primary">';
             echo '<div class="panel-heading">' . $recipe_name . '</div>';
@@ -96,8 +95,8 @@
             </div>";
         }
     ?>
-    
     </div>
+</div>
     
 <?php require 'res/footer.php'; ?>
     
