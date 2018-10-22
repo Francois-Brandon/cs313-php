@@ -46,12 +46,22 @@
 
     
    <?php
-        foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.ingredients AS ingredients, r.directions AS directions FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
+        foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id') as $row)
         {   
             $recipe_name = htmlspecialchars($row['recipe_name']);
             $recipe_id = htmlspecialchars($row['recipe_id']);
-            $ingredients = htmlspecialchars($row['ingredients']);
+            $ingredients = '';
             $directions = htmlspecialchars($row['directions']);
+            
+            $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
+            $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            foreach ($rows)
+            {
+                $ingredients += htmlspecialchars($rows['item']) . '<br>';
+            }
             
             
             echo '<div class="row">';
