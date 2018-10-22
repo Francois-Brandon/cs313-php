@@ -41,9 +41,7 @@
         $ingredients = '';
         $directions = htmlspecialchars($row['directions']);
         
-        echo 'recipe name: ' . $recipe_name;
-        echo 'recipe id: ' . $recipe_id;
-        echo 'recipe directions: ' . $directions;
+        
         
         $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
         $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
@@ -53,6 +51,10 @@
         foreach ($ingredientrows as $value) {
             $ingredients .= htmlspecialchars($value['item']) . '<br>';
         }
+        
+        echo 'recipe name: ' . $recipe_name;
+        echo 'recipe id: ' . $recipe_id;
+        echo 'recipe directions: ' . $directions;
         
         echo '<div class="col-sm-4">';
             echo '<div class="panel panel-primary">';
