@@ -104,10 +104,20 @@ body {
 .btn-success {
     padding: 9px 10px !important;
     background: #ddd;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #ddd;
 }
 
 .btn-danger {
     padding: 9px 10px !important;
+    background: #ddd;
+    border: none;
+}
+
+.btn-danger:hover {
     background: #ddd;
 }
 
