@@ -66,7 +66,7 @@ body {
 
 
 .search-container {
-    padding-top: 20%;
+    padding-top: 50px;
     color: #fff;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .recipe-container {
-    padding-top: 50px;
+    
 }
 
 .panel {
@@ -193,7 +193,7 @@ footer {
 @media only screen and (min-width: 992px) {
     .panel-body:after {
         position: absolute;
-        bottom: 40px;
+        bottom: 60px;
         left: 15px;
         height: 150px;
         width: 293.33px;
