@@ -64,14 +64,15 @@
             }
             
             
-            echo '<div class="col-sm-4">';
-            echo '<div class="panel panel-primary">';
-            echo '<div class="panel-heading">' . $recipe_name . '</div>';
-            echo '<div class="panel-body">' . $ingredients . '</div>';
-            echo '<div class="panel-footer"><a data-toggle="modal" href=\'\#' . $recipe_id . '-modal\'>See More</a></div>';
-            echo '</div>';
-            echo '</div>';
-            echo '</div>';
+
+                echo '<div class="col-sm-4">';
+                    echo '<div class="panel panel-primary">';
+                        echo '<div class="panel-heading">' . $recipe_name . '</div>';
+                        echo '<div class="panel-body">' . $ingredients . '</div>';
+                        echo '<div class="panel-footer"><a data-toggle="modal" href=\'\#' . $recipe_id . '-modal\'>See More</a></div>';
+                    echo '</div>';
+                echo '</div>';
+
             
             echo "<div id=\"" . $recipe_id . "-modal\" class=\"modal fade\" role=\"dialog\">
                 <div class=\"modal-dialog\">
