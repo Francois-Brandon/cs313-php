@@ -39,7 +39,7 @@
     
 <?php require 'res/nav.php'; ?>
     
-    
+<h1>Recent Recipe Submissions</h1>
 <div class="container recipe-container">    
   <div class="row">
 
