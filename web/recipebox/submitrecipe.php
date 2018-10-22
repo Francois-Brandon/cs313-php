@@ -16,14 +16,20 @@
     
 <?php require 'res/nav.php'; ?>
     
-<div class="container results-container">
+<div class="container">
 	<div class="row">
-		<input type="hidden" name="count" value="1" />
         <div class="control-group" id="fields">
             <label class="control-label" for="field1">Ingredients</label>
-            <div class="controls" id="profs"> 
-                <form class="input-append">
-                    <div id="field"><input autocomplete="off" class="ingredient-input" id="field1" name="prof1" type="text" placeholder="1 Cup Sugar" data-items="8"/><button id="b1" class="ingredient-button" type="button">+</button></div>
+            <div class="controls"> 
+                <form role="form" autocomplete="off">
+                    <div class="entry input-group col-xs-3">
+                        <input class="form-control" name="fields[]" type="text" placeholder="1 Cup Sugar" />
+                    	<span class="input-group-btn">
+                            <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                    </div>
                 </form>
             <br>
             </div>
