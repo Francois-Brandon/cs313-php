@@ -23,7 +23,7 @@
             <label class="control-label" for="field1">Ingredients</label>
             <div class="controls" id="profs"> 
                 <form class="input-append">
-                    <div id="field"><input autocomplete="off" class="ingredient-input" id="field1" name="prof1" type="text" placeholder="1 Cup Sugar" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                    <div id="field"><input autocomplete="off" class="ingredient-input" id="field1" name="prof1" type="text" placeholder="1 Cup Sugar" data-items="8"/><button id="b1" class="ingredient-button" type="button">+</button></div>
                 </form>
             <br>
             </div>
