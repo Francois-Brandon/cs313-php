@@ -21,7 +21,7 @@
     
 <?php require 'res/nav.php'; ?>
 
-<div class="container search-container"> 
+<div class="container results-container"> 
 <h1>Results</h1>
   <div class="row">
     

@@ -109,8 +109,8 @@ body {
   border: none;
 }
 
-.recipe-container {
-    
+.results-container {
+    padding-top: 75px;
 }
 
 .panel {
