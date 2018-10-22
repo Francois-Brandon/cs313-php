@@ -69,7 +69,7 @@
             echo '<div class="panel panel-primary">';
             echo '<div class="panel-heading">' . $recipe_name . '</div>';
             echo '<div class="panel-body">' . $ingredients . '</div>';
-            echo '<div class="panel-body panel-extended">...</div>';
+            echo '<div class="panel-extended">...</div>';
             echo '<div class="panel-footer"><a data-toggle="modal" href=\'\#' . $recipe_id . '-modal\'>See More</a></div>';
             echo '</div>';
             echo '</div>';
