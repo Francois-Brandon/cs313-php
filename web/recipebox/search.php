@@ -42,7 +42,6 @@
         $directions = htmlspecialchars($row['directions']);
         
         
-        
         $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
         $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
         $stmt->execute();
@@ -52,7 +51,6 @@
             $ingredients .= htmlspecialchars($value['item']) . '<br>';
         }
         
-        echo 'ingredients: ' . $ingredients;
         
         echo '<div class="col-sm-4">';
             echo '<div class="panel panel-primary">';
