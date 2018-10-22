@@ -113,6 +113,11 @@ body {
     padding-top: 50px;
 }
 
+.recipe-container h1 {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0.6755077030812324) 3%, rgba(255,255,255,0.2329306722689075) 52%, rgba(255,255,255,0) 90%);
+}
+
 .panel {
     border: none;
 }
