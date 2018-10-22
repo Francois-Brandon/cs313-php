@@ -113,11 +113,6 @@ body {
     padding-top: 50px;
 }
 
-.recipe-container h1 {
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,0.6755077030812324) 3%, rgba(255,255,255,0.2329306722689075) 52%, rgba(255,255,255,0) 90%);
-}
-
 .panel {
     border: none;
 }
@@ -136,6 +131,18 @@ body {
 .panel-body {
     overflow: hidden !important;
     height: 150px !important;
+}
+
+.panel-body:after {
+  position: absolute;
+  bottom: 0;  
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to top,
+     rgba(255,255,255, 1) 20%, 
+     rgba(255,255,255, 0) 80%
+  );
 }
 
 .panel-footer {
