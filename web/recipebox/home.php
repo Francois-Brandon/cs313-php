@@ -60,7 +60,7 @@
             
             foreach ($rows as $value)
             {
-                $ingredients += htmlspecialchars($value['item']) . '<br>';
+                $ingredients .= htmlspecialchars($value['item']) . '<br>';
             }
             
             
