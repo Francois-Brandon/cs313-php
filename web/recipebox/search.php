@@ -52,9 +52,7 @@
             $ingredients .= htmlspecialchars($value['item']) . '<br>';
         }
         
-        echo 'recipe name: ' . $recipe_name;
-        echo 'recipe id: ' . $recipe_id;
-        echo 'recipe directions: ' . $directions;
+        echo 'ingredients: ' . $ingredients;
         
         echo '<div class="col-sm-4">';
             echo '<div class="panel panel-primary">';
