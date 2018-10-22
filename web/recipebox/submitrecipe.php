@@ -16,7 +16,7 @@
     
 <?php require 'res/nav.php'; ?>
     
-<div class="container">
+<div class="container results-container">
 	<div class="row">
         <div class="control-group" id="fields">
             <label class="control-label" for="field1">Ingredients</label>
