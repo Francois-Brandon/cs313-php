@@ -129,13 +129,13 @@ body {
     opacity:0.9;
 }
 
+.panel-extended {
+    padding: 0px 15px !important;
+}
+
 .panel-body {
     overflow: hidden;
     height: 150px;
-}
-
-.panel-extended {
-    padding: 0px 15px !important;
 }
 
 .panel-footer {
