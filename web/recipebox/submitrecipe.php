@@ -38,7 +38,7 @@
 </div>-->
     
 
-    
+ <div class="container results-container">  
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <form id="msform">
@@ -48,12 +48,24 @@
                 <h2 class="fs-title">Ingredients</h2>
                 <h3 class="fs-subtitle">Enter the ingredients for your recipe</h3>
                 
-                        <input class="form-control" name="fields[]" type="text" placeholder="1 Cup Sugar"/>
-                    	<span class="input-group-btn">
-                            <button class="btn btn-success btn-add" type="button">
-                                <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                        </span>
+                <div class="row">
+                    <div class="control-group" id="fields">
+                        <label class="control-label" for="field1">Ingredients</label>
+                        <div class="controls"> 
+                            <form role="form" autocomplete="off">
+                                <div class="entry input-group col-xs-3">
+                                    <input class="form-control" name="fields[]" type="text" placeholder="1 Cup Sugar" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-success btn-add" type="button">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        <br>
+                        </div>
+                    </div>
+                </div>
                     
                 
             </fieldset>
@@ -74,7 +86,7 @@
         </form>
     </div>
 </div>
-
+</div> 
     
    <?php
         //foreach ($db->query('SELECT * FROM scriptures') as $row)
