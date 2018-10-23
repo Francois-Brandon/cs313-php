@@ -30,6 +30,11 @@
                             </button>
                         </span>
                     </div>
+                    <h3 class="fs-subtitle">Enter the directions for your recipe</h3>
+                    <textarea name="input-directions" rows="20" cols="100" placeholder="Directions"></textarea>
+                    <h3 class="fs-subtitle">Select image to upload</h3>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
                 </form>
             <br>
             </div>
