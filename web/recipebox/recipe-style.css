@@ -135,6 +135,14 @@ body {
     padding-bottom: 75px;
 }
 
+.submit-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: #fff !important;
+    border-color: #fff !important;
+    opacity:0.9;
+}
+
 .panel {
     border: none;
 }
@@ -186,7 +194,7 @@ body {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
