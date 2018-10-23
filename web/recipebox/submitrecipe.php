@@ -19,7 +19,7 @@
 <div class="container results-container">
 	<div class="row">
         <div class="control-group" id="fields">
-            <label class="control-label" for="field1">Ingredients</label>
+            <h3>Enter the ingredients for your recipe</h3>
             <div class="controls"> 
                 <form role="form" autocomplete="off">
                     <div class="entry input-group col-xs-3">
@@ -30,10 +30,14 @@
                             </button>
                         </span>
                     </div>
-                    <h3 class="fs-subtitle">Enter the directions for your recipe</h3>
+                    
+                    <h3>Enter the directions for your recipe</h3>
                     <textarea name="input-directions" rows="20" cols="80" placeholder="Directions"></textarea>
+                    
+                    <h3 class="fs-subtitle">Select image to upload</h3>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
                 </form>
-            <br>
+                <br>
             </div>
         </div>
 	</div>
