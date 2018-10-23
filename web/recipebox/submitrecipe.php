@@ -30,6 +30,8 @@
                             </button>
                         </span>
                     </div>
+                    <h3 class="fs-subtitle">Enter the directions for your recipe</h3>
+                    <textarea name="input-directions" rows="20" cols="80" placeholder="Directions"></textarea>
                 </form>
             <br>
             </div>
