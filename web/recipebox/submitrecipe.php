@@ -16,7 +16,7 @@
     
 <?php require 'res/nav.php'; ?>
     
-<!--<div class="container results-container">
+<div class="container results-container">
 	<div class="row">
         <div class="control-group" id="fields">
             <label class="control-label" for="field1">Ingredients</label>
@@ -35,11 +35,11 @@
             </div>
         </div>
 	</div>
-</div>-->
+</div>
     
 
- <div class="container results-container">  
-<div class="row">
+ <!--<div class="container results-container">  
+    <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <form id="msform">
 
@@ -86,7 +86,7 @@
         </form>
     </div>
 </div>
-</div> 
+</div> -->
     
    <?php
         //foreach ($db->query('SELECT * FROM scriptures') as $row)
