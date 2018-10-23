@@ -16,7 +16,7 @@
     
 <?php require 'res/nav.php'; ?>
     
-<div class="container results-container">
+<!--<div class="container results-container">
 	<div class="row">
         <div class="control-group" id="fields">
             <label class="control-label" for="field1">Ingredients</label>
@@ -35,7 +35,7 @@
             </div>
         </div>
 	</div>
-</div>
+</div>-->
     
     
     
@@ -53,14 +53,14 @@
             <fieldset>
                 <h2 class="fs-title">Ingredients</h2>
                 <h3 class="fs-subtitle">Enter the ingredients for your recipe</h3>
-                <div class="entry input-group col-xs-3">
+                
                         <input class="form-control" name="fields[]" type="text" placeholder="1 Cup Sugar"/>
                     	<span class="input-group-btn">
                             <button class="btn btn-success btn-add" type="button">
                                 <span class="glyphicon glyphicon-plus"></span>
                             </button>
                         </span>
-                    </div>
+                    
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
             <fieldset>
