@@ -17,7 +17,7 @@
 <?php require 'res/nav.php'; ?>
     
 <div class="container results-container">
-	<div class="row">
+	<div class="row submit-panel">
         <div class="control-group" id="fields">
             <h3>Enter the ingredients for your recipe</h3>
             <div class="controls"> 

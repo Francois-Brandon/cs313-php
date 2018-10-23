@@ -135,9 +135,7 @@ body {
     padding-bottom: 75px;
 }
 
-.submit-container {
-    padding-top: 75px;
-    padding-bottom: 75px;
+.submit-panel {
     background-color: #fff !important;
     border-color: #fff !important;
     opacity:0.9;
