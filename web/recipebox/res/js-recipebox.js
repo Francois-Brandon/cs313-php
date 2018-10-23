@@ -6,7 +6,7 @@ $(function()
 
         var controlForm = $('.controls form:first'),
             currentEntry = $(this).parents('.entry:first'),
-            newEntry = $(currentEntry.clone()).insertAfter(controlForm);
+            newEntry = $(currentEntry.clone()).prependTo(controlForm);
 
         newEntry.find('input').val('');
         controlForm.find('.entry:not(:last) .btn-add')
