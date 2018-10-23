@@ -36,6 +36,8 @@
                     
                     <h3 class="fs-subtitle">Select image to upload</h3>
                     <input type="file" name="fileToUpload" id="fileToUpload">
+                    
+                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
                 </form>
                 <br>
             </div>
