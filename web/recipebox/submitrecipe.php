@@ -20,8 +20,9 @@
 	<div class="row">
         <div class="control-group" id="fields">
             <label class="control-label" for="field1">Ingredients</label>
+            <form role="form" autocomplete="off">
             <div class="controls"> 
-                <form role="form" autocomplete="off">
+                
                     <div class="entry input-group col-xs-3">
                         <input class="form-control" name="fields[]" type="text" placeholder="1 Cup Sugar" />
                     	<span class="input-group-btn">
@@ -30,14 +31,16 @@
                             </button>
                         </span>
                     </div>
-                    <h3 class="fs-subtitle">Enter the directions for your recipe</h3>
+                    
+                
+            <br>
+            </div>
+                <h3 class="fs-subtitle">Enter the directions for your recipe</h3>
                     <textarea name="input-directions" rows="20" cols="100" placeholder="Directions"></textarea>
                     <h3 class="fs-subtitle">Select image to upload</h3>
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" name="submit" class="submit action-button" value="Submit"/>
-                </form>
-            <br>
-            </div>
+            </form>
         </div>
 	</div>
 </div>
