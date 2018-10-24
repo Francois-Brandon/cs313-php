@@ -32,11 +32,11 @@
                     </div>
                     
                     <h3>Enter the directions for your recipe</h3>
-                    <textarea name="input-directions" rows="20" cols="80" placeholder="Directions"></textarea>
+                    <textarea name="input-directions" rows="20" cols="80" placeholder="Preheat oven to 375 degrees..."></textarea>
                     
                     <h3 class="fs-subtitle">Select image to upload</h3>
                     <input type="file" name="fileToUpload" id="fileToUpload">
-                    
+                    <br><br>
                     <input type="submit" name="submit" class="submit action-button" value="Submit"/>
                 </form>
                 <br>

@@ -30,27 +30,40 @@
     <link rel="stylesheet" type="text/css" href="../mystyle.css">
 </head>
 <body>
-    <h1>Scripture Resources</h1>
+    <h1>Add a Scripture</h1>
     
-    <?php
-    $statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
-    $statement->execute();
-    
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-        {
 
-            echo '<p>';
-            echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':';
-            echo $row['verse'] . '</strong>' . ' - ' . $row['content'];
-            echo '</p>';
-        }
-    ?><br>
     
     <form action="results.php" method="post">
         
         <label for="book">Enter Book:</label>
         <input type="text" name="book"><br>
-        <button type="submit">Search</button>
+        
+        <label for="chapter">Enter Chapter:</label>
+        <input type="text" name="chapter"><br>
+        
+        <label for="verse">Enter Verse:</label>
+        <input type="text" name="verse"><br>
+        
+        
+        <?php 
+            $stmt = $db->prepare('SELECT * FROM topic');
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+
+            foreach ($rows as $value) {
+                $topic = $value['name'];
+                $id = $value['id'];
+                
+                echo '<input type="checkbox" name="' . $topic . $id .'" value="$topic"> $topic<br>';
+            }
+        
+        
+        ?>
+        
+        
+        <button type="submit">Submit</button>
     
     </form>
     
