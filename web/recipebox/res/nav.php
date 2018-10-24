@@ -12,18 +12,29 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="search.php">SEARCH</a></li>
         <li><a href="submitrecipe.php">SUBMIT RECIPE</a></li>
-        <li><a href="about.php">ABOUT</a></li>
-        <li><a href="contact.php">CONTACT</a></li>
-        <!--<li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+<!--        <li><a href="about.php">ABOUT</a></li>
+        <li><a href="contact.php">CONTACT</a></li>-->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCOUNT
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">Media</a></li> 
+        <?php 
+            if (isset($_SESSION['username']))
+            {
+                $username = $_SESSION['username'];
+                echo '<li>Hello' . $username . ', <a href="signout.php">Sign Out</a></li>';
+                echo '<li><a href="myrecipes.php">My Recipes</a></li>';
+            }
+            else
+            {
+                echo '<li><a href="signin.php">Sign In</a></li>';
+            }
+        ?>
+            
           </ul>
-        </li>-->
+        </li>
         
       </ul>
     </div>

@@ -18,12 +18,13 @@
     
 <div class="container results-container">
 	<div class="row submit-panel">
-        <div class="control-group" id="fields">
-            <h3>Enter the ingredients for your recipe</h3>
+        <div class="control-group" id="fields">    
             <div class="controls"> 
                 <form role="form" autocomplete="off" action="insert.php" method="post" enctype="multipart/form-data">
+                    <input type="text" name="recipe-name" placeholder="Recipe Name">
+                    <h3>Enter the ingredients for your recipe</h3>
                     <div class="entry input-group col-xs-3">
-                        <input class="form-control" name="fields[]" type="text" placeholder="1 Cup Sugar" />
+                        <input class="form-control" name="ingredients[]" type="text" placeholder="1 Cup Sugar" />
                     	<span class="input-group-btn">
                             <button class="btn btn-success btn-add" type="button">
                                 <span class="glyphicon glyphicon-plus"></span>
@@ -34,7 +35,7 @@
                     <h3>Enter the directions for your recipe</h3>
                     <textarea name="input-directions" rows="20" cols="80" placeholder="Preheat oven to 375 degrees..."></textarea>
                     
-                    <br>
+                    <br><br>
                     <input type="submit" name="submit" class="submit action-button" value="Submit"/>
                 </form>
                 <br>
