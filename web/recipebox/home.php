@@ -39,7 +39,7 @@
 
     
    <?php
-        foreach ($db->query('SELECT c.name AS name, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN contributor AS c ON r.contributor_id = c.contributor_id ORDER BY r.date_created ASC LIMIT 3') as $row)
+        foreach ($db->query('SELECT c.username AS username, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN login AS c ON r.user_id = c.id ORDER BY r.date_created ASC LIMIT 3') as $row)
         {
             $recipe_name = htmlspecialchars($row['recipe_name']);
             $recipe_id = htmlspecialchars($row['recipe_id']);

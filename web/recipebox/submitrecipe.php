@@ -20,7 +20,10 @@
 	<div class="row submit-panel">
         <div class="control-group" id="fields">    
             <div class="controls"> 
-                <form role="form" autocomplete="off" action="insert.php" method="post" enctype="multipart/form-data">
+                <?php 
+            if (isset($_SESSION['username']))
+            {
+                echo '<form role="form" autocomplete="off" action="insertrecipe.php" method="post" enctype="multipart/form-data">
                     <input type="text" name="recipe-name" placeholder="Recipe Name">
                     <h3>Enter the ingredients for your recipe</h3>
                     <div class="entry input-group col-xs-3">
@@ -37,7 +40,14 @@
                     
                     <br><br>
                     <input type="submit" name="submit" class="submit action-button" value="Submit"/>
-                </form>
+                </form>';
+            }
+            else
+            {
+                echo '<h3><a href="signin.php">Sign In to Submit a Recipe!</a></h3>';
+            }
+        ?>
+                
                 <br>
             </div>
         </div>
