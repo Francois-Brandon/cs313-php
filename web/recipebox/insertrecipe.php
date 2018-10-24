@@ -20,7 +20,7 @@ foreach ($rows as $row) {
 }
 
 
-$query = 'INSERT INTO recipe (name, user_id, directions) VALUES(:name, :user_id, :directions)';
+$query = 'INSERT INTO recipe (recipe_name, user_id, directions) VALUES(:name, :user_id, :directions)';
 $statement = $db->prepare($query);
 $statement->bindValue(':name', $name);
 $statement->bindValue(':user_id', $user_id);
