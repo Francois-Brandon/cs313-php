@@ -24,8 +24,9 @@
             if (isset($_SESSION['username']))
             {
                 $username = $_SESSION['username'];
-                echo '<li>Hello' . $username . ', <a href="signout.php">Sign Out</a></li>';
+                echo '<li>Hello, ' . $username . '</li>';          
                 echo '<li><a href="myrecipes.php">My Recipes</a></li>';
+                echo '<li><a href="signout.php">Sign Out</a></li>';
             }
             else
             {

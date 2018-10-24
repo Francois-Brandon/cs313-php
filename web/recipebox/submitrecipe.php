@@ -1,4 +1,7 @@
-<?php require 'res/db.php'; ?>
+<?php 
+    require 'res/db.php'; 
+    session_start();
+?>
 
 <html lang="en">
 <head>
