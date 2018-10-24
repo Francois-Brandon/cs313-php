@@ -11,7 +11,6 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$db = get_db();
 	$query = 'SELECT password FROM login WHERE username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
