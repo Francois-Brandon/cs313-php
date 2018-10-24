@@ -108,8 +108,12 @@ body {
     border: none;
 }
 
-.btn-success:hover, .btn-success:focus, .btn-success:acive {
-    background: #c5d3ca;
+.btn-success:hover, .btn-success:acive {
+    background: #c5d3ca !important;
+}
+
+.btn-success:focus {
+    background: #ddd !important;
 }
 
 .btn-danger {
@@ -118,8 +122,12 @@ body {
     border: none;
 }
 
-.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+.btn-danger:hover, .btn-danger:active {
     background: #c99c9c;
+}
+
+.btn-danger:focus {
+    background: #ddd !important;
 }
 
 .entry:not(:first-of-type) {
