@@ -15,7 +15,7 @@ $username = htmlspecialchars($username);
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-require("db.php");
+require("res/db.php");
 
 $query = 'INSERT INTO login(username, password) VALUES(:username, :password)';
 $statement = $db->prepare($query);
