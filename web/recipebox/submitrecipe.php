@@ -21,7 +21,7 @@
         <div class="control-group" id="fields">
             <h3>Enter the ingredients for your recipe</h3>
             <div class="controls"> 
-                <form role="form" autocomplete="off">
+                <form role="form" autocomplete="off" action="upload.php" method="post" enctype="multipart/form-data">
                     <div class="entry input-group col-xs-3">
                         <input class="form-control" name="fields[]" type="text" placeholder="1 Cup Sugar" />
                     	<span class="input-group-btn">
