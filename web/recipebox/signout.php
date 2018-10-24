@@ -2,7 +2,7 @@
 
 session_start();
 unset($_SESSION['username']);
-header("Location: signIn.php");
+header("Location: signin.php");
 die();
 
 ?>

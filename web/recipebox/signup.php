@@ -38,8 +38,8 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-success btn-lg btn-block">Create Account</button>
             </div>
+            <div class="text-center">Already have an account? <a href="signin.php">Sign in</a></div>
         </form>
-        <div class="text-center">Already have an account? <a href="signin.php">Sign in</a></div>
     </div>
 </div> 
 

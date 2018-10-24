@@ -69,8 +69,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
             <div class="form-group">
                 <button type="submit" class="btn btn-success btn-lg btn-block">Sign In</button>
             </div>
+            <div class="text-center">Don't have an account? <a href="signup.php">Sign Up</a></div>
         </form>
-        <div class="text-center">Don't have an account? <a href="signup.php">Sign Up</a></div>
     </div>
 </div>
 

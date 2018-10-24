@@ -235,9 +235,9 @@ footer {
 }
 
 .form-control{
-		height: 40px;
-		box-shadow: none;
-		color: #969fa4;
+
+    box-shadow: none;
+    color: #969fa4;
 }
 
 .form-control:focus{
