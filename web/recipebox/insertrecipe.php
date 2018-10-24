@@ -15,7 +15,9 @@ $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$user_id = $rows['username'];
+foreach ($rows as $row) {
+    $user_id = $row['username'];
+}
 
 
 $query = 'INSERT INTO recipe (name, user_id, directions) VALUES(:name, :chapter, :directions)';
