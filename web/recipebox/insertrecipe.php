@@ -27,7 +27,7 @@ $statement->bindValue(':user_id', $user_id);
 $statement->bindValue(':directions', $directions);
 $statement->execute();
 
-$newId = $pdo->lastInsertId('recipe_recipe_id_seq');
+$newId = $db->lastInsertId('recipe_recipe_id_seq');
 
 
 foreach ($ingredients as $item) {
