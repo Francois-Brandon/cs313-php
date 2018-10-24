@@ -13,7 +13,7 @@ $query = 'SELECT id FROM login WHERE username = :username LIMIT 1';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 $statement->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $user_id = $rows['username'];
 
