@@ -56,22 +56,23 @@ if (isset($_POST['username']) && isset($_POST['password']))
     
 <?php require 'res/nav.php'; ?>
     
-<div class="signup-form">
-    <form action="signin.php" method="post">
-		<h2>Sign In</h2>
-        <div class="form-group">
-        	<input type="text" class="form-control" name="username" placeholder="Username" required="required">
-        </div>
-		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-        </div>       
-		<div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block">Sign In</button>
-        </div>
-    </form>
-	<div class="text-center">Don't have an account? <a href="signup.php">Sign Up</a></div>
+<div class="container results-container">
+    <div class="signup-form">
+        <form action="signin.php" method="post">
+            <h2>Sign In</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            </div>       
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg btn-block">Sign In</button>
+            </div>
+        </form>
+        <div class="text-center">Don't have an account? <a href="signup.php">Sign Up</a></div>
+    </div>
 </div>
-    
 
     
 <?php require 'res/footer.php'; ?>

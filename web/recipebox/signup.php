@@ -21,26 +21,27 @@
     
 <?php require 'res/nav.php'; ?>
     
-<div class="signup-form">
-    <form action="createaccount.php" method="post">
-		<h2>Sign Up</h2>
-		<p class="hint-text">Create your free account.</p>
-        <div class="form-group">
-        	<input type="text" class="form-control" name="username" placeholder="Username" required="required">
-        </div>
-		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-        </div>
-		<div class="form-group">
-            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
-        </div>        
-		<div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block">Create Account</button>
-        </div>
-    </form>
-	<div class="text-center">Already have an account? <a href="signin.php">Sign in</a></div>
-</div>
-    
+<div class="container results-container">
+    <div class="signup-form">
+        <form action="createaccount.php" method="post">
+            <h2>Sign Up</h2>
+            <p class="hint-text">Create your free account.</p>
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+            </div>        
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg btn-block">Create Account</button>
+            </div>
+        </form>
+        <div class="text-center">Already have an account? <a href="signin.php">Sign in</a></div>
+    </div>
+</div> 
 
     
 <?php require 'res/footer.php'; ?>
