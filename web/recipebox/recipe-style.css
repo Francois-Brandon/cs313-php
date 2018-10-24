@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda|Special+Elite|Vidaloka');
 
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
     background-image: url(res/abstract-art-board-139321.jpg);
@@ -8,6 +12,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Special Elite', cursive;
+    margin-bottom: 60px;
 }
 
 .navbar-brand {
@@ -114,7 +119,11 @@ body {
     border: none;
 }
 
-.btn-success:hover, .btn-success:acive {
+.btn-success:hover {
+    background: #c5d3ca !important;
+}
+
+.btn-success:active {
     background: #c5d3ca !important;
 }
 
@@ -216,8 +225,7 @@ textarea {
 }
 
 footer {
-
-    left: 0;
+    position: absolute;
     bottom: 0;
     width: 100%;
     padding: 8px;
