@@ -1,10 +1,21 @@
 <?php
+
+session_start();
     
 require 'res/db.php';
 
 $ingredients = $_POST['ingredients'];
 $directions = $_POST['input-directions'];
 $name = $_POST['recipe-name'];
+$username = $_SESSION['username'];
+
+$query = 'SELECT id FROM login WHERE username = :username LIMIT 1';
+$statement = $db->prepare($query);
+$statement->bindValue(':username', $username);
+$statement->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$user_id = $rows['username'];
 
 
 $query = 'INSERT INTO recipe (name, user_id, directions) VALUES(:name, :chapter, :directions)';

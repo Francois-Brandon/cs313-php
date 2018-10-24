@@ -216,7 +216,7 @@ textarea {
 }
 
 footer {
-    position: absolute;
+
     left: 0;
     bottom: 0;
     width: 100%;
@@ -235,9 +235,7 @@ footer {
 }
 
 .form-control{
-
     box-shadow: none;
-    color: #969fa4;
 }
 
 .form-control:focus{
