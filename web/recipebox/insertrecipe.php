@@ -17,11 +17,11 @@ $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-echo '<br>Query result1: ' . $rows;
-echo '<br>Query result2: ' . $rows[0]['username'];
+echo '<br>Query result1: ' . $rows['id'];
+echo '<br>Query result2: ' . $rows[0]['id'];
 
 foreach ($rows as $row) {
-    $user_id = $row['username'];
+    $user_id = $row['id'];
 }
 
 echo '<br>User ID: ' . $user_id;
