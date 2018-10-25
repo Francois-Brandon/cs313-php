@@ -355,9 +355,31 @@ footer {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 320px) {
+    .panel-body:after {
+        position: absolute;
+        bottom: 40px;
+        left: 15px;
+        height: 150px;
+        width: 290px;
+        content: "";
+        background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
+    }
+}
 
+@media only screen and (min-width: 375px) {
+    .panel-body:after {
+        position: absolute;
+        bottom: 40px;
+        left: 15px;
+        height: 150px;
+        width: 345px;
+        content: "";
+        background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
+    }
+}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 425px) {
     .panel-body:after {
         position: absolute;
         bottom: 40px;
