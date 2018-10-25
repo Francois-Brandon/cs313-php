@@ -200,12 +200,13 @@ textarea {
 
 .panel-body {
     overflow: hidden;
+    text-overflow: ellipsis;
     height: 150px !important;
     border: 1px solid #2d2d30;
     
 }
 
-.panel-body:after {
+/*.panel-body:after {
     position: absolute;
     bottom: 60px;
     left: 15px;
@@ -213,7 +214,7 @@ textarea {
     width: 100%;
     content: "";
     background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
-}
+}*/
 
 .panel-footer {
     background-color: #2d2d30 !important;
