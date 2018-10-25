@@ -202,7 +202,7 @@ textarea {
     overflow: hidden;
     height: 150px !important;
     border: 1px solid #2d2d30;
-    background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
+    
 }
 
 .panel-body:after {
@@ -212,7 +212,7 @@ textarea {
     height: 150px;
     width: 100%;
     content: "";
-    
+    background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
 }
 
 .panel-footer {
