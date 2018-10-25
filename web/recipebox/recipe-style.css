@@ -205,15 +205,15 @@ textarea {
     background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
 }
 
-/*.panel-body:after {
+.panel-body:after {
     position: absolute;
     bottom: 60px;
     left: 15px;
     height: 150px;
-    width: 220px;
+    width: 100%;
     content: "";
     
-}*/
+}
 
 .panel-footer {
     background-color: #2d2d30 !important;
