@@ -192,6 +192,7 @@ textarea {
 .panel-body {
     overflow: hidden !important;
     height: 150px !important;
+    border-color: #2d2d30 !important;
 }
 
 .panel-body:after {
