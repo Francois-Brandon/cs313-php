@@ -199,12 +199,14 @@ textarea {
 }
 
 .panel-body {
-    overflow: hidden !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     height: 150px !important;
     border: 1px solid #2d2d30;
 }
 
-.panel-body:after {
+/*.panel-body:after {
     position: absolute;
     bottom: 60px;
     left: 15px;
@@ -212,7 +214,7 @@ textarea {
     width: 220px;
     content: "";
     background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
-}
+}*/
 
 .panel-footer {
     background-color: #2d2d30 !important;
@@ -355,6 +357,7 @@ footer {
     text-decoration: none;
 }
 
+/*
 @media only screen and (max-width: 320px) {
     .panel-body:after {
         position: absolute;
@@ -426,3 +429,4 @@ footer {
         background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
     }
 } 
+*/
