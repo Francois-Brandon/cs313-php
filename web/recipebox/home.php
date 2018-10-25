@@ -33,9 +33,9 @@
 </div>
     
 <div class="container recipe-container"> 
-    <h1>Recent Recipe Submissions</h1>
-  <div class="row">
-
+    
+  <div class="row submit-panel">
+      <h1>Recent Recipe Submissions</h1>
 
     
    <?php
