@@ -17,6 +17,9 @@ $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+echo '<br>Query result1: ' . $rows;
+echo '<br>Query result2: ' . $rows['username'];
+
 foreach ($rows as $row) {
     $user_id = $row['username'];
 }
