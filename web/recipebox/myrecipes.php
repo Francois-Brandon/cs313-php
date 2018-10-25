@@ -43,7 +43,7 @@
         $username = $_SESSION['username'];
 
 
-        $query = 'SELECT c.username AS username, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN login AS c ON r.user_id = c.id ORDER BY r.date_created DESC WHERE c.username = :username';
+        $query = 'SELECT c.username AS username, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN login AS c ON r.user_id = c.id WHERE c.username = :username ORDER BY r.date_created DESC';
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
         $statement->execute();
