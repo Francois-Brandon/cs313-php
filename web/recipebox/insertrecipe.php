@@ -19,8 +19,9 @@ foreach ($rows as $row) {
     $user_id = $row['username'];
 }
 
+echo $user_id;
 
-$query = 'INSERT INTO recipe (recipe_name, user_id, directions) VALUES(:name, :user_id, :directions)';
+/*$query = 'INSERT INTO recipe (recipe_name, user_id, directions) VALUES(:name, :user_id, :directions)';
 $statement = $db->prepare($query);
 $statement->bindValue(':name', $name);
 $statement->bindValue(':user_id', $user_id);
@@ -41,6 +42,6 @@ $statement->execute();
 }
 
 header("Location: home.php");
-die();
+die();*/
 
 ?>
