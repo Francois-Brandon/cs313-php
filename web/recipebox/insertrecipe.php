@@ -9,7 +9,7 @@ $directions = $_POST['input-directions'];
 $name = $_POST['recipe-name'];
 $username = $_SESSION['username'];
 
-$query = 'SELECT id FROM login WHERE username = :username LIMIT 1';
+$query = 'SELECT id FROM login WHERE username = :username';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 $statement->execute();
