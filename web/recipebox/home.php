@@ -4,7 +4,7 @@
 
     require 'res/db.php';
 
-    echo $_SESSION['username'];
+    
 
 ?>
 
@@ -21,7 +21,8 @@
 </head>
 <body>
     
-<?php require 'res/nav.php'; ?>
+<?php require 'res/nav.php'; 
+    echo $_SESSION['username'];?>
     
 <div class="container search-container">
     <div class="row search-row">
