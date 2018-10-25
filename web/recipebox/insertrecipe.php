@@ -9,6 +9,8 @@ $directions = $_POST['input-directions'];
 $name = $_POST['recipe-name'];
 $username = $_SESSION['username'];
 
+echo 'Username: ' . $username;
+
 $query = 'SELECT id FROM login WHERE username = :username';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
@@ -19,7 +21,7 @@ foreach ($rows as $row) {
     $user_id = $row['username'];
 }
 
-echo $user_id;
+echo '<br>User ID: ' . $user_id;
 
 /*$query = 'INSERT INTO recipe (recipe_name, user_id, directions) VALUES(:name, :user_id, :directions)';
 $statement = $db->prepare($query);
