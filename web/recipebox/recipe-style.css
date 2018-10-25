@@ -201,8 +201,8 @@ textarea {
 .panel-body {
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 150px !important;
-    border: 1px solid #2d2d30;
+    height: 155px !important;
+    background-color: #F1E9C4;
     
 }
 

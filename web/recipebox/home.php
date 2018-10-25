@@ -34,7 +34,7 @@
     
 <div class="container recipe-container"> 
     
-  <div class="row">
+  <div class="row submit-panel">
       <h1>Recent Recipe Submissions</h1>
 
     
