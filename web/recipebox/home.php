@@ -90,7 +90,7 @@
                 </div>
             </div>";
             
-            if (count % 3 == 0) {
+            if (count > 2 && count % 3 == 0) {
                 echo '</div><div class="row">';
             }
         }
