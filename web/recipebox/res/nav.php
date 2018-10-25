@@ -10,7 +10,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="search.php">SEARCH</a></li>
+        <li><a href="home.php">SEARCH</a></li>
         <li><a href="submitrecipe.php">SUBMIT RECIPE</a></li>
 <!--        <li><a href="about.php">ABOUT</a></li>
         <li><a href="contact.php">CONTACT</a></li>-->
@@ -24,7 +24,7 @@
             if (isset($_SESSION['username']))
             {
                 $username = $_SESSION['username'];
-                echo '<li>Hello, ' . $username . '</li>';          
+                echo '<li class="user-welcome">Hello, ' . $username . '</li>';          
                 echo '<li><a href="myrecipes.php">My Recipes</a></li>';
                 echo '<li><a href="signout.php">Sign Out</a></li>';
             }

@@ -39,7 +39,9 @@
 
     
    <?php
-        foreach ($db->query('SELECT c.username AS username, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN login AS c ON r.user_id = c.id ORDER BY r.date_created DESC LIMIT 3') as $row)
+        $count = 1;
+      
+        foreach ($db->query('SELECT c.username AS username, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN login AS c ON r.user_id = c.id ORDER BY r.date_created DESC LIMIT 12') as $row)
         {
             $recipe_name = htmlspecialchars($row['recipe_name']);
             $recipe_id = htmlspecialchars($row['recipe_id']);
@@ -87,6 +89,10 @@
 
                 </div>
             </div>";
+            
+            if (count % 3 == 0) {
+                echo '</div><div class="row">';
+            }
         }
     ?>
     </div>

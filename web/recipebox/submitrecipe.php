@@ -30,7 +30,7 @@
                     <h3>Enter your recipe\'s name</h3>
                     <input class="form-control" type="text" name="recipe-name" placeholder="Recipe Name">
                     <h3>Enter the ingredients for your recipe</h3>
-                    <div class="entry input-group col-xs-3">
+                    <div class="entry input-group col-xs-6">
                         <input class="form-control" name="ingredients[]" type="text" placeholder="1 Cup Sugar" />
                     	<span class="input-group-btn">
                             <button class="btn btn-success btn-add" type="button">
