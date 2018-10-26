@@ -74,10 +74,12 @@ if (!isset($_SESSION['username'])) {
         echo '<div id="" . $recipe_id . "-modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form role="form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
+                        
                             <div class="modal-header">
+                            <form role="form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <input class="form-control" type="text" name="recipe-name" value="'. $recipe_name . '" placeholder="Recipe Name">
+                                </form>
                             </div>
                             <div class="modal-body">
                                 <p>' . $ingredients . '</p>
@@ -86,7 +88,7 @@ if (!isset($_SESSION['username'])) {
                             <div class="modal-footer">
                                 <button type="submit" name="save" class="btn btn-default">Save</button>
                             </div>
-                        </form>
+                        
                     </div>      
                 </div>
             </div>';
