@@ -194,7 +194,7 @@ textarea {
 }
 
 .panel-primary {
-    border-color: #2d2d30 !important;
+    border: 1px solid #2d2d30 !important;
     opacity:0.9;
 }
 
@@ -202,7 +202,6 @@ textarea {
     overflow: hidden;
     text-overflow: ellipsis;
     height: 155px !important;
-    background-color: #F1E9C4;
     
 }
 

@@ -21,21 +21,10 @@
     
 <?php require 'res/nav.php'; ?>
     
-<div class="container search-container">
-    <div class="row search-row">
-        <div class="col-sm-12">
-            <form action="search.php" method="post">
-                <button type="submit"><i class="fa fa-search"></i></button>
-                <input type="text" name="recipe-search" class="recipe-search-bar" placeholder="Search for a recipe by keyword">
-            </form>
-        </div>
-    </div>
-</div>
     
 <div class="container recipe-container"> 
     
   <div class="row">
-      <h1>Recent Recipe Submissions</h1>
 
     
    <?php
