@@ -4,6 +4,11 @@
 
     require 'res/db.php';
 
+if (!isset($_SESSION['username'])) {
+    header("Location: signin.php");
+    die();
+}
+
 ?>
 
 <html lang="en">
@@ -25,7 +30,7 @@
 <div class="container results-container"> 
     
   <div class="row">
-
+      <h1>My Recipes</h1>
     
    <?php
         $count = 1;
