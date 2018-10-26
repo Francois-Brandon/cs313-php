@@ -108,10 +108,7 @@
         </div>
       
         <input type="hidden" id="pageno" value="1">
-        
-      
-    </div>
-    <div>
+        <div>
         <img id="loader" src="res/loader.svg">
     </div>
         <script>
@@ -132,6 +129,9 @@
              });
          });
         </script>
+      
+    </div>
+    
 </div>
     
 <?php require 'res/footer.php'; ?>
