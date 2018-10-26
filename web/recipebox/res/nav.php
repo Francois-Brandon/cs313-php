@@ -10,7 +10,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.php">SEARCH</a></li>
+        <li><a href="home.php">BROWSE</a></li>
         <li><a href="submitrecipe.php">SUBMIT RECIPE</a></li>
 <!--        <li><a href="about.php">ABOUT</a></li>
         <li><a href="contact.php">CONTACT</a></li>-->
