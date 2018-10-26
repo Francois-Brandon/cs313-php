@@ -33,10 +33,9 @@
 </div>-->
     
     
-<div class="container">
+<div class="container search-container">
 	<div class="row">
         <div class="col-md-6">
-    		<h2>Custom search field</h2>
             <div id="custom-search-input">
                 <form action="search.php" method="post">
                     <div class="input-group col-md-12">
