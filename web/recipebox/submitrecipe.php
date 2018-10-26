@@ -48,7 +48,7 @@
             }
             else
             {
-                echo '<h3 class="center"><a href="signin.php" class="center">Sign In to Submit a Recipe!</a></h3>';
+                echo '<h3><a href="signin.php" class="center">Sign In to Submit a Recipe!</a></h3>';
             }
         ?>
                 

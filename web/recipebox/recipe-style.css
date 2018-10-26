@@ -17,6 +17,7 @@ body {
 
 h3 a:hover {
     text-decoration: none;
+    opacity:0.9;
 }
 
 .navbar-brand {
@@ -28,8 +29,8 @@ h3 a:hover {
 }
 
 .center {
-    margin: auto;
-    padding: 10px;
+    text-align: center;
+    color: #2d2d30;
 }
 
 /* Add a dark background color with a little bit see-through */ 
