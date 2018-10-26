@@ -22,7 +22,7 @@
 <?php require 'res/nav.php'; ?>
     
     
-<div class="container recipe-container"> 
+<div class="container results-container"> 
     
   <div class="row">
 
