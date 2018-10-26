@@ -33,6 +33,10 @@ h3 a:hover {
     color: #2d2d30;
 }
 
+.center {
+    text-align: center;
+}
+
 /* Add a dark background color with a little bit see-through */ 
 .navbar {
     margin-bottom: 0;
