@@ -66,7 +66,7 @@ if (!isset($_SESSION['username'])) {
                     echo '<div class="panel panel-primary">';
                         echo '<div class="panel-heading">' . $recipe_name . '</div>';
                         echo '<div class="panel-body">' . $ingredients . '</div>';
-                        echo '<div class="panel-footer"><a data-toggle="modal" href=\'\#' . $recipe_id . '-modal\'>See More</a></div>';
+                        echo '<div class="panel-footer"><a data-toggle="modal" href=\'\#' . $recipe_id . '-modal\'>Edit/Delete</a></div>';
                     echo '</div>';
                 echo '</div>';
 
@@ -76,17 +76,17 @@ if (!isset($_SESSION['username'])) {
                     <div class="modal-content">
                         
                             <div class="modal-header">
-                            <form role="form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <input class="form-control" type="text" name="recipe-name" value="'. $recipe_name . '" placeholder="Recipe Name">
-                                </form>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div class="modal-body">
-                                <p>' . $ingredients . '</p>
-                                <p>' . $directions . '</p>
+                                <form role="form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
+                                
+                                <input class="form-control" type="text" name="recipe-name" value="'. $recipe_name . '" placeholder="Recipe Name">
+                                <button type="submit" name="save" class="btn btn-default">Save</button>
+                                </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" name="save" class="btn btn-default">Save</button>
+                                
                             </div>
                         
                     </div>      
