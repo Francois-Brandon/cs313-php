@@ -404,6 +404,12 @@ footer {
 
 .row h1 {
     padding: 15px;
+    background-color: #3e3e42;
+    color: #fff;
+    opacity: 0.9;
+    border-radius: 6px;
+    text-align: center;
+    margin: 15px;
 }
 
 /*
