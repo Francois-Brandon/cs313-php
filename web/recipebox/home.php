@@ -35,7 +35,7 @@
 <form action="search.php" method="post">
     <div class="container search-container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
                         <input type="text" class="form-control input-lg" placeholder="Search for a recipe by keyword" />
