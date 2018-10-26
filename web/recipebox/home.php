@@ -22,13 +22,13 @@
 <?php require 'res/nav.php'; ?>
     
 <div class="container search-container">
-    <div class="row search-row">
-        <div class="col-sm-12">
+    <div class="row">
+        
             <form action="search.php" method="post">
                 <button type="submit"><i class="fa fa-search"></i></button>
                 <input type="text" name="recipe-search" class="recipe-search-bar" placeholder="Search for a recipe by keyword">
             </form>
-        </div>
+        
     </div>
 </div>
     
