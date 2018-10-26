@@ -415,6 +415,7 @@ footer {
 #loader {
     margin: auto;
     display: block;
+    clear: both;
 }
 
 /*
