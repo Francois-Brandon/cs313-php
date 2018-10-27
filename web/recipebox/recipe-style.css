@@ -418,6 +418,18 @@ footer {
     clear: both;
 }
 
+.edit-form {
+    
+}
+
+.delete-form {
+    
+}
+
+.modal-footer {
+    display: flex;
+}
+
 /*
 @media only screen and (max-width: 320px) {
     .panel-body:after {
