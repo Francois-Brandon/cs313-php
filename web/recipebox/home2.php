@@ -115,6 +115,7 @@
          $(document).ready(function(){
              $('#loader').on('inview', function(event, isInView) {
                  if (isInView) {
+                     $('#loader').show();
                      var nextPage = parseInt($('#pageno').val())+1;
                      $.ajax({
                          type: 'POST',
@@ -123,6 +124,7 @@
                          success: function(data){
                              $('#response').append(data);
                              $('#pageno').val(nextPage);
+                             $('#loader').hide();
                          }
                      });
                  }
