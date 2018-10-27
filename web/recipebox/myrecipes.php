@@ -85,13 +85,13 @@ if (!isset($_SESSION['username'])) {
                             <p>' . $directions . '</p>
                         </div>
                         <div class="modal-footer">
-                            <form role="form" class="edit-form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
-                                <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
-                                <button type="submit" class="btn btn-default">Edit</button>
-                            </form>
                             <form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
                                 <button type="submit" class="btn btn-default">Delete</button>
+                            </form>
+                            <form role="form" class="edit-form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
+                                <button type="submit" class="btn btn-default">Edit</button>
                             </form>
                         </div>
                     </div>
