@@ -26,7 +26,7 @@
                 <?php 
             if (isset($_SESSION['username']))
             {
-                echo '<form role="form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
+                echo '<form role="form" autocomplete="off" action="insertrecipe.php" method="post" enctype="multipart/form-data">
                     <h3>Enter your recipe\'s name</h3>
                     <input class="form-control" type="text" name="recipe-name" placeholder="Recipe Name">
                     <h3>Enter the ingredients for your recipe</h3>

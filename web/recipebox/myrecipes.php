@@ -71,26 +71,33 @@ if (!isset($_SESSION['username'])) {
                 echo '</div>';
 
             
-        echo "<div id=\"" . $recipe_id . "-modal\" class=\"modal fade\" role=\"dialog\">
-                <div class=\"modal-dialog\">
+        echo '<div id="' . $recipe_id . '-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
 
-                    <div class=\"modal-content\">
-                        <div class=\"modal-header\">
-                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
-                            <h4 class=\"modal-title\">" . $recipe_name . "</h4>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">' . $recipe_name . '</h4>
                         </div>
-                        <div class=\"modal-body\">
+                        <div class="modal-body">
                             
-                            <p>" . $ingredients . "</p>
-                            <p>" . $directions . "</p>
+                            <p>' . $ingredients . '</p>
+                            <p>' . $directions . '</p>
                         </div>
-                        <div class=\"modal-footer\">
-                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
+                        <div class="modal-footer">
+                            <form role="form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
+                                <button type="submit" class="btn btn-default">Edit</button>
+                            </form>
+                            <form role="form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
+                                <button type="submit" class="btn btn-default">Delete</button>
+                            </form>
                         </div>
                     </div>
 
                 </div>
-            </div>";
+            </div>';
             
             if (count > 2 && count % 3 == 0) {
                 echo '</div><div class="row">';
