@@ -36,8 +36,7 @@
                 $statement->execute();
                 $recrows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-                foreach ($recrows as $row)
-                {
+                foreach ($recrows as $row) {
                     $recipe_name = htmlspecialchars($row['recipe_name']);
                     
                     $directions = htmlspecialchars($row['directions']);
@@ -52,43 +51,45 @@
                     $i = 1;
             
             
-            if (isset($_SESSION['username']) && $username == $recipe_user)
-            {
-                echo '<form role="form" autocomplete="off" action="updaterecipe.php" method="post" enctype="multipart/form-data">
-                    <h3>Enter your recipe\'s name</h3>
-                    <input class="form-control" type="text" name="recipe-name" placeholder="Recipe Name" value="' . $recipe_name . '">
-                    <h3>Enter the ingredients for your recipe</h3>';
+                    if (isset($_SESSION['username']) && $username == $recipe_user) {
+                        echo '<form role="form" autocomplete="off" action="updaterecipe.php" method="post" enctype="multipart/form-data">
+                                <h3>Enter your recipe\'s name</h3>
+                                <input class="form-control" type="text" name="recipe-name" placeholder="Recipe Name" value="' . $recipe_name . '">
+                                <h3>Enter the ingredients for your recipe</h3>';
                 
-                foreach ($rows as $value) {
-                        $ingredient = htmlspecialchars($value['item']);
+                        foreach ($rows as $value) {
+                            $ingredient = htmlspecialchars($value['item']);
+                            echo '<div class="entry input-group col-xs-6">
+                                    <input class="form-control" name="ingredients[]" type="text" placeholder="1 Cup Sugar" value="' . $ingredient . '"/>
+                                    <span class="input-group-btn">';
+                            if ($i == $count) {
+                                echo '<button class="btn btn-success btn-add" type="button">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>';
+                            } 
+                            
+                            else {
+                                echo '<button class="btn btn-danger btn-remove" type="button">
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                    </button>';
+                            }
+                            
+                                echo '</span>
+                                </div>';
+                        }
+                        echo '<h3>Enter the directions for your recipe</h3>
+                            <textarea name="input-directions" rows="20" cols="80" placeholder="Preheat oven to 375 degrees..." value="' . $directions . '"></textarea>
                     
-                    
-                    echo '<div class="entry input-group col-xs-6">
-                        <input class="form-control" name="ingredients[]" type="text" placeholder="1 Cup Sugar" value="' . $ingredient . '"/>
-                    	<span class="input-group-btn">';
-                    if ($i == $count) {
-                        echo '<button class="btn btn-success btn-add" type="button">';
-                    } else {
-                        echo '<button class="btn btn-danger btn-remove" type="button">';
+                            <br><br>
+                            <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
+                            <input type="submit" name="submit" class="submit action-button" value="Save"/>
+                        </form>';
                     }
-                                echo '<span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                        </span>
-                    </div>';
+                    else {
+                        echo '<h3 class="center"><a href="signin.php">Sign In to edit your recipes</a></h3>';
+                    }
                 }
-                echo '<h3>Enter the directions for your recipe</h3>
-                    <textarea name="input-directions" rows="20" cols="80" placeholder="Preheat oven to 375 degrees..." value="' . $directions . '"></textarea>
-                    
-                    <br><br>
-                    <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
-                    <input type="submit" name="submit" class="submit action-button" value="Save"/>
-                </form>';
-            }
-            else
-            {
-                echo '<h3 class="center"><a href="signin.php">Sign In to edit your recipes</a></h3>';
-            }
-        ?>
+                ?>
                 
                 <br>
             </div>
