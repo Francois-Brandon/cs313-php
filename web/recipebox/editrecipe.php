@@ -78,7 +78,7 @@
                                 </div>';
                         }
                         echo '<h3>Enter the directions for your recipe</h3>
-                            <textarea name="input-directions" rows="20" cols="80" placeholder="Preheat oven to 375 degrees..." value="' . $directions . '"></textarea>
+                            <textarea name="input-directions" rows="20" cols="80" placeholder="Preheat oven to 375 degrees...">' . $directions . '</textarea>
                     
                             <br><br>
                             <input type="hidden" name="recipe_id" value="' . $recipe_id . '">

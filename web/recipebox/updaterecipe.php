@@ -39,7 +39,7 @@ foreach ($ingredients as $item) {
     
 $query = 'INSERT INTO ingredients (recipe_id, item) VALUES(:recipe_id, :item)';
 $statement = $db->prepare($query);
-$statement->bindValue(':recipe_id', $newId);
+$statement->bindValue(':recipe_id', $recipe_id);
 $statement->bindValue(':item', $item);
 $statement->execute();
     
