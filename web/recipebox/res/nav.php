@@ -30,7 +30,7 @@
             }
             else
             {
-                echo '<li><a href="signin.php">Sign In</a></li>';
+                echo '<li><a href="signin.php">SIGN IN</a></li>';
             }
         ?>
             
