@@ -40,7 +40,7 @@
                     </div>
                     
                     <h3>Enter the directions for your recipe</h3>
-                    <textarea name="input-directions" rows="20" cols="80" placeholder="Preheat oven to 375 degrees..."></textarea>
+                    <textarea name="input-directions" rows="20" class="form-control" placeholder="Preheat oven to 375 degrees..."></textarea>
                     
                     <br><br>
                     <input type="submit" name="submit" class="submit action-button" value="Submit"/>
