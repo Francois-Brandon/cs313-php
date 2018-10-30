@@ -31,7 +31,7 @@
                 <?php 
                 
                 $username = $_SESSION['username'];
-                $recipe_id = $_POST['recipe_id']
+                $recipe_id = $_POST['recipe_id'];
                 $recipe_user = '';
 
                 $query = 'SELECT r.recipe_name, r.directions, r.user_id, l.username FROM recipe AS r JOIN login AS l ON r.user_id = l.id WHERE r.recipe_id = :recipe_id';
