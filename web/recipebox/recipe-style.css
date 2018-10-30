@@ -446,6 +446,14 @@ footer {
     background: none;
 }
 
+.details-btn:hover {
+    color: #fff;
+}
+
+.details-form {
+    margin-bottom: 0px !important;
+}
+
 @media only screen and (max-width: 768px) {
     .dropdown-menu li a {
         color: #d5d5d5 !important
