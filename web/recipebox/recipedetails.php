@@ -72,7 +72,7 @@
                                      url: 'addfavorite.php',
                                      data: { recipe_id:" . recipe_id . " },
                                      success: function(data){
-                                         $('#addfav').after(\"<input type='button' value=\"Added to Favorites\"></input>\");
+                                         $('#addfav').after(\"<input type=\"button\" value=\"Added to Favorites\"></input>\");
                                          $('#addfav').attr(\"type\", \"hidden\");
                                      }
                                  });
