@@ -66,7 +66,12 @@ if (!isset($_SESSION['username'])) {
                     echo '<div class="panel panel-primary">';
                         echo '<div class="panel-heading">' . $recipe_name . '</div>';
                         echo '<div class="panel-body">' . $ingredients . '</div>';
-                        echo '<div class="panel-footer"><a data-toggle="modal" href=\'\#' . $recipe_id . '-modal\'>See More</a></div>';
+                        echo '<div class="panel-footer">
+                        <form role="form" autocomplete="off" action="recipedetails.php" method="post" enctype="multipart/form-data" class="details-form">
+                        <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
+                            <input type="submit" name="submit" class="submit action-button details-btn" value="See More"/>
+                        </form>
+                        </div>';
                     echo '</div>';
                 echo '</div>';
 
