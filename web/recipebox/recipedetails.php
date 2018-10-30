@@ -70,7 +70,7 @@
                                  $.ajax({
                                      type: 'POST',
                                      url: 'addfavorite.php',
-                                     data: { recipe_id:" . recipe_id . " },
+                                     data: { recipe_id:" . $recipe_id . " },
                                      success: function(data){
                                          $('#addfav').after('<input type=\"button\" value=\"Added to Favorites\"></input>');
                                          $('#addfav').attr(\"type\", \"hidden\");
