@@ -26,6 +26,7 @@
     
 <div class="container results-container">
 	<div class="row submit-panel">
+        
         <!--<div class="control-group" id="fields">    
             <div class="controls">--> 
                 <?php 
@@ -51,13 +52,13 @@
                     $stmt->execute();
                     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                        echo '<h3>' . $recipe_name . '</h3><p>';
+                        echo '<div class="row"><h3>' . $recipe_name . '</h3></div><div class="row"><p>';
                 
                         foreach ($rows as $value) {
                             $ingredient = htmlspecialchars($value['item']);
                             echo $ingredient . '<br>';
                         }
-                        echo '</p><p>' . $directions . '</p><br>';
+                        echo '</p></div><div class="row"><p>' . $directions . '</p></div><br>';
                     
                     
                 }
@@ -74,6 +75,8 @@
                 }
                 
                 if (isset($_SESSION['username'])) {
+                    
+                    echo '<div class="row">';
                     
                     $query = 'SELECT * FROM favorites WHERE recipe_id = :recipe_id AND user_id = :user_id';
                     $statement = $db->prepare($query);
@@ -102,7 +105,7 @@
                             </form></div>';
                     }
                 
-                echo "<script>
+                echo "</div><script>
                          $(document).ready(function(){
                              $('#addfav').click(function() {
 
