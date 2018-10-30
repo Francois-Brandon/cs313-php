@@ -77,7 +77,7 @@
                         echo '<div class="panel-footer">
                         <form role="form" autocomplete="off" action="recipedetails.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
-                            <input type="submit" name="submit" class="submit action-button" value="See More"/>
+                            <input type="submit" name="submit" class="submit action-button details-btn" value="See More"/>
                         </form>
                         </div>';
                     echo '</div>';

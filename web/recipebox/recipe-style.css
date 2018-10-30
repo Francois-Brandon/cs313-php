@@ -442,6 +442,10 @@ footer {
     padding-left: 15px;
 }
 
+.details-btn {
+    background: none;
+}
+
 @media only screen and (max-width: 768px) {
     .dropdown-menu li a {
         color: #d5d5d5 !important
