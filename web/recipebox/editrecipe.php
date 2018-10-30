@@ -82,7 +82,7 @@
                     
                             <br><br>
                             <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
-                            <input type="submit" name="submit" class="submit action-button" value="Save"/>
+                            <input type="submit" name="submit" class="submit action-button btn-default" value="Save"/>
                         </form>';
                     }
                     else {

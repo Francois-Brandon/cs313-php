@@ -455,6 +455,12 @@ footer {
     margin-bottom: 0px !important;
 }
 
+.btn-default {
+    color: #fff;
+    background-color: #333;
+    border-color: #ccc;
+}
+
 @media only screen and (max-width: 768px) {
     .dropdown-menu li a {
         color: #d5d5d5 !important
