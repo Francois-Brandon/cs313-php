@@ -124,7 +124,7 @@
 
                                  $.ajax({
                                      type: 'POST',
-                                     url: 'addfavorite.php',
+                                     url: 'removefavorite.php',
                                      data: { recipe_id:" . $recipe_id . " },
                                      success: function(data){
                                          $('#removefav').attr(\"type\", \"hidden\");
