@@ -61,7 +61,7 @@
                     
                 }
                 if (isset($_SESSION['username'])) {
-                    echo '<input type="button" id="addfav" value="Add to Favorites"></input>
+                    echo '<div class="details-options"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default"></input>
                     <form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
                                 <button type="submit" class="btn btn-default">Delete</button>
@@ -69,7 +69,7 @@
                             <form role="form" class="edit-form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
                                 <button type="submit" class="btn btn-default">Edit</button>
-                            </form>';
+                            </form></div>';
                 
                 echo "<script>
                          $(document).ready(function(){
@@ -80,7 +80,7 @@
                                      url: 'addfavorite.php',
                                      data: { recipe_id:" . $recipe_id . " },
                                      success: function(data){
-                                         $('#addfav').after('<input type=\"button\" value=\"Added to Favorites\"></input>');
+                                         $('#addfav').after('<input type=\"button\" value=\"Added to Favorites\" class=\"btn btn-default\"></input>');
                                          $('#addfav').attr(\"type\", \"hidden\");
                                      }
                                  });
