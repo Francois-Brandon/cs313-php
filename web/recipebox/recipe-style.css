@@ -444,10 +444,11 @@ footer {
 
 .details-btn {
     background: none;
+    border: none;
 }
 
 .details-btn:hover {
-    color: #fff;
+    color: #d5d5d5;
 }
 
 .details-form {
