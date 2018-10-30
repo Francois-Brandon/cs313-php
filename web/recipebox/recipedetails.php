@@ -31,9 +31,10 @@
                 <?php 
                 
                 $username = $_SESSION['username'];
-                $recipe_id = $_POST['recipe_id'];
+                $recipe_id = $_POST['recipe_id']
+                $recipe_user = '';
 
-                $query = 'SELECT r.recipe_name, r.directions, r.user_id, l.username FROM recipe AS r  JOIN login AS l ON r.user_id = l.id WHERE r.recipe_id = :recipe_id';
+                $query = 'SELECT r.recipe_name, r.directions, r.user_id, l.username FROM recipe AS r JOIN login AS l ON r.user_id = l.id WHERE r.recipe_id = :recipe_id';
                 $statement = $db->prepare($query);
                 $statement->bindValue(':recipe_id', $recipe_id);
                 $statement->execute();
@@ -60,9 +61,23 @@
                     
                     
                 }
+                
+                $query = 'SELECT id FROM login WHERE username = :username';
+                $statement = $db->prepare($query);
+                $statement->bindValue(':username', $username);
+                $statement->execute();
+                $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
+                foreach ($rows as $row) {
+                    $user_id = $row['id'];
+                }
+                
                 if (isset($_SESSION['username'])) {
-                    echo '<div class="details-options"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default"></input>
-                    <form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
+                    
+                    echo '<div class="details-options"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn"></input>';
+                    if($recipe_user == $username) {
+                    echo '<form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
                                 <button type="submit" class="btn btn-default">Delete</button>
                             </form>
@@ -70,6 +85,7 @@
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
                                 <button type="submit" class="btn btn-default">Edit</button>
                             </form></div>';
+                    }
                 
                 echo "<script>
                          $(document).ready(function(){
@@ -80,7 +96,7 @@
                                      url: 'addfavorite.php',
                                      data: { recipe_id:" . $recipe_id . " },
                                      success: function(data){
-                                         $('#addfav').after('<input type=\"button\" value=\"Added to Favorites\" class=\"btn btn-default\"></input>');
+                                         $('#addfav').after('<input type=\"button\" value=\"Added to Favorites\" class=\"btn btn-default fav-button\"></input>');
                                          $('#addfav').attr(\"type\", \"hidden\");
                                      }
                                  });
