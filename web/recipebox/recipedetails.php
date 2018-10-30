@@ -75,7 +75,8 @@
                 
                 if (isset($_SESSION['username'])) {
                     
-                    echo '<div class="details-options"><form role="form" class="fav-form"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn"></input></form>';
+                    echo '<div class="details-options"><form role="form" class="fav-form"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
+                    <input type="hidden" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
                     if($recipe_user == $username) {
                     echo '<form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
@@ -96,8 +97,24 @@
                                      url: 'addfavorite.php',
                                      data: { recipe_id:" . $recipe_id . " },
                                      success: function(data){
-                                         $('#addfav').after('<input type=\"button\" value=\"Added to Favorites\" class=\"btn btn-default fav-button\"></input>');
                                          $('#addfav').attr(\"type\", \"hidden\");
+                                         $('#removefav').attr(\"type\", \"button\");
+                                     }
+                                 });
+
+                             });
+                         });
+                         
+                         $(document).ready(function(){
+                             $('#removefav').click(function() {
+
+                                 $.ajax({
+                                     type: 'POST',
+                                     url: 'addfavorite.php',
+                                     data: { recipe_id:" . $recipe_id . " },
+                                     success: function(data){
+                                         $('#removefav').attr(\"type\", \"hidden\");
+                                         $('#addfav').attr(\"type\", \"button\");
                                      }
                                  });
 
