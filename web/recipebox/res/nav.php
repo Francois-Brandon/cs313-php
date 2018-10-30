@@ -26,6 +26,7 @@
                 $username = $_SESSION['username'];
                 echo '<li class="user-welcome">Hello, ' . $username . '</li>';          
                 echo '<li><a href="myrecipes.php">MY RECIPES</a></li>';
+                echo '<li><a href="favoriterecipes.php">FAVORITE RECIPES</a></li>';
                 echo '<li><a href="signout.php">SIGN OUT</a></li>';
             }
             else

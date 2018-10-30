@@ -16,21 +16,11 @@
     <link rel="stylesheet" type="text/css" href="recipe-style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
 </head>
 <body>
     
 <?php require 'res/nav.php'; ?>
-    
-<!--<div class="container search-container">
-    <div class="row">
-        
-            <form action="search.php" method="post">
-                <button type="submit"><i class="fa fa-search"></i></button>
-                <input type="text" name="recipe-search" class="recipe-search-bar" placeholder="Search for a recipe by keyword">
-            </form>
-        
-    </div>
-</div>-->
     
 <form action="search.php" method="post">
     <div class="container search-container">
@@ -56,7 +46,7 @@
   <div class="row">
       <h1>Recent Recipe Submissions</h1>
 
-    
+      <div id="response">
    <?php
         $count = 1;
       
@@ -114,6 +104,31 @@
             }
         }
     ?>
+      </div>
+      <input type="hidden" id="pageno" value="1">
+      <div>
+        <img id="loader" src="res/loader.svg">
+      </div>
+        <script>
+         $(document).ready(function(){
+             $('#loader').on('inview', function(event, isInView) {
+                 if (isInView) {
+                     $('#loader').show();
+                     var nextPage = parseInt($('#pageno').val())+1;
+                     $.ajax({
+                         type: 'POST',
+                         url: 'pagination.php',
+                         data: { pageno: nextPage },
+                         success: function(data){
+                             $('#response').append(data);
+                             $('#pageno').val(nextPage);
+                             $('#loader').hide();
+                         }
+                     });
+                 }
+             });
+         });
+        </script>
     </div>
 </div>
     

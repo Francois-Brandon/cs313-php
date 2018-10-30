@@ -93,6 +93,7 @@
                             <p>" . $directions . "</p>
                         </div>
                         <div class=\"modal-footer\">
+                            <input type='button' id='addfav' value='" . $recipe_id . "'>Add to Favorites</input>
                             <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
                         </div>
                     </div>
@@ -105,6 +106,24 @@
             }
         }
     ?>
+          <script>
+         $(document).ready(function(){
+             $('#addfav').click(function() {
+                    
+                 var recipe_id = $('#addfav').val();
+                 $.ajax({
+                     type: 'POST',
+                     url: 'addfavorite.php',
+                     data: { recipe_id: recipe_id },
+                     success: function(data){
+                         $('#addfav').after("<input type='button'>Added to Favorites</input>");
+                         $('#addfav').attr("type", "hidden")
+                     }
+                 });
+                 
+             });
+         });
+        </script>
         </div>
       
         <input type="hidden" id="pageno" value="1">
