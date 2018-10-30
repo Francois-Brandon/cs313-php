@@ -61,7 +61,7 @@
                     
                 }
                 if (isset($_SESSION['username'])) {
-                    echo '<input type="button" id="favrecipe">Add to Favorites</input>';
+                    echo '<input type="button" id="favrecipe" value="Add to Favorites"></input>';
                 
                 echo "<script>
                          $(document).ready(function(){
@@ -72,7 +72,7 @@
                                      url: 'addfavorite.php',
                                      data: { recipe_id:" . recipe_id . " },
                                      success: function(data){
-                                         $('#addfav').after(\"<input type='button'>Added to Favorites</input>\");
+                                         $('#addfav').after(\"<input type='button' value=\"Added to Favorites\"></input>\");
                                          $('#addfav').attr(\"type\", \"hidden\");
                                      }
                                  });
