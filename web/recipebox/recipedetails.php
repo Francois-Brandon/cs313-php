@@ -23,6 +23,7 @@
 <?php require 'res/nav.php'; ?>
     
     
+    
 <div class="container results-container">
 	<div class="row submit-panel">
         <div class="control-group" id="fields">    
@@ -57,26 +58,32 @@
                         }
                         echo '</p><p>' . $directions . '</p><br>';
                     
+                    
+                }
+                if (isset($_SESSION['username']))
+            {
+                    echo '<input type="button" id="favrecipe">Add to Favorites</input>';
+                
+                echo "<script>
+                         $(document).ready(function(){
+                             $('#addfav').click(function() {
+
+                                 $.ajax({
+                                     type: 'POST',
+                                     url: 'addfavorite.php',
+                                     data: { recipe_id:" . recipe_id . " },
+                                     success: function(data){
+                                         $('#addfav').after(\"<input type='button'>Added to Favorites</input>\");
+                                         $('#addfav').attr(\"type\", \"hidden\")
+                                     }
+                                 });
+
+                             });
+                         });
+                    </script>"
                 }
                 ?>
-                <script>
-         $(document).ready(function(){
-             $('#addfav').click(function() {
-                    
-                 var recipe_id = $('#addfav').val();
-                 $.ajax({
-                     type: 'POST',
-                     url: 'addfavorite.php',
-                     data: { recipe_id: recipe_id },
-                     success: function(data){
-                         $('#addfav').after("<input type='button'>Added to Favorites</input>");
-                         $('#addfav').attr("type", "hidden")
-                     }
-                 });
-                 
-             });
-         });
-        </script>
+                
                 <br>
             </div>
         </div>
