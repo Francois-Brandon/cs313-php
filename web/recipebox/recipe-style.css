@@ -430,6 +430,12 @@ footer {
 
 .details-options {
     display: flex;
+    flex-direction: row-reverse;
+}
+
+.fav-btn {
+    height: 34px;
+    padding-left: 15px;
 }
 
 @media only screen and (max-width: 768px) {
