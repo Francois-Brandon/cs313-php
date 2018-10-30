@@ -50,11 +50,11 @@
                     $stmt->execute();
                     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                        echo '<h3>' . $recipe_name . '</h3>';
+                        echo '<h3>' . $recipe_name . '</h3><p>';
                 
                         foreach ($rows as $value) {
                             $ingredient = htmlspecialchars($value['item']);
-                            echo '<p>' . $ingredient . '<br>';
+                            echo $ingredient . '<br>';
                         }
                         echo '</p><p>' . $directions . '</p><br>';
                     
