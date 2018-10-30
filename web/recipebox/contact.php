@@ -16,13 +16,7 @@
 <?php require 'res/nav.php'; ?>
 
     
-   <?php
-        //foreach ($db->query('SELECT * FROM scriptures') as $row)
-        //{
-        //  echo '<p><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> //- "' . $row['content'] . '"';
-        //  echo '</p>';
-        //}
-    ?>
+
     
 <?php require 'res/footer.php'; ?>
     
