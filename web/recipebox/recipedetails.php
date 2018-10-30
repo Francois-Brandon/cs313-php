@@ -60,8 +60,7 @@
                     
                     
                 }
-                if (isset($_SESSION['username']))
-            {
+                if (isset($_SESSION['username'])) {
                     echo '<input type="button" id="favrecipe">Add to Favorites</input>';
                 
                 echo "<script>
@@ -79,7 +78,7 @@
                                  });
 
                              });
-                         });
+                         
                     </script>"
                 }
                 ?>
