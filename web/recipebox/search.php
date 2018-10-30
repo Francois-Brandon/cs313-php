@@ -21,9 +21,10 @@
     
 <?php require 'res/nav.php'; ?>
 
-<div class="container results-container"> 
-<h1>Results</h1>
-  <div class="row">
+<div class="container results-container">
+    <div class="row">
+        <h1>Results</h1>
+  
     
    <?php
     $search = '%' . $_POST['recipe-search'] . '%';
