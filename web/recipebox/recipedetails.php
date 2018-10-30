@@ -75,7 +75,7 @@
                 
                 if (isset($_SESSION['username'])) {
                     
-                    echo '<div class="details-options"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn"></input>';
+                    echo '<form role="form" class="edit-form"><div class="details-options"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn"></input></form>';
                     if($recipe_user == $username) {
                     echo '<form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
