@@ -73,12 +73,12 @@
                                      data: { recipe_id:" . recipe_id . " },
                                      success: function(data){
                                          $('#addfav').after(\"<input type='button'>Added to Favorites</input>\");
-                                         $('#addfav').attr(\"type\", \"hidden\")
+                                         $('#addfav').attr(\"type\", \"hidden\");
                                      }
                                  });
 
                              });
-                         
+                         });
                     </script>"
                 }
                 ?>
