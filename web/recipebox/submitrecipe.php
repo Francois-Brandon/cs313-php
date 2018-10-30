@@ -43,7 +43,7 @@
                     <textarea name="input-directions" rows="20" class="form-control" placeholder="Preheat oven to 375 degrees..."></textarea>
                     
                     <br><br>
-                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                    <input type="submit" name="submit" class="submit action-button btn-default" value="Submit"/>
                 </form>';
             }
             else
