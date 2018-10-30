@@ -26,8 +26,8 @@
     
 <div class="container results-container">
 	<div class="row submit-panel">
-        <div class="control-group" id="fields">    
-            <div class="controls"> 
+        <!--<div class="control-group" id="fields">    
+            <div class="controls">--> 
                 <?php 
                 
                 $username = $_SESSION['username'];
@@ -141,8 +141,8 @@
                 <br>
             </div>
         </div>
-	</div>
-</div>
+	<!--</div>
+</div>-->
     
 <?php require 'res/footer.php'; ?>
     
