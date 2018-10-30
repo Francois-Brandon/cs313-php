@@ -28,7 +28,7 @@
             <div class="col-md-12">
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="Search for a recipe by keyword" />
+                        <input type="text" name="recipe-search" class="form-control input-lg" placeholder="Search for a recipe by keyword" />
                         <span class="input-group-btn">
                             <button class="btn btn-info btn-lg" type="button">
                                 <i class="glyphicon glyphicon-search"></i>

@@ -28,7 +28,7 @@
    <?php
     $search = '%' . $_POST['recipe-search'] . '%';
           
-    $stmt = $db->prepare('SELECT c.username AS username, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN login AS c ON r.user_id = c.id WHERE LOWER(r.recipe_name) LIKE LOWER(\':search\') ORDER BY r.date_created');
+    $stmt = $db->prepare('SELECT c.username AS username, r.recipe_id AS recipe_id, r.recipe_name AS recipe_name, r.directions AS directions, r.date_created FROM recipe AS r JOIN login AS c ON r.user_id = c.id WHERE LOWER(r.recipe_name) LIKE LOWER(:search) ORDER BY r.date_created');
     $stmt->bindValue(':search', $search, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
