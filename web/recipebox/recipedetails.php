@@ -61,7 +61,7 @@
                     
                 }
                 if (isset($_SESSION['username'])) {
-                    echo '<input type="button" id="favrecipe" value="Add to Favorites"></input>';
+                    echo '<input type="button" id="addfav" value="Add to Favorites"></input>';
                 
                 echo "<script>
                          $(document).ready(function(){
