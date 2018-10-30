@@ -75,8 +75,22 @@
                 
                 if (isset($_SESSION['username'])) {
                     
-                    echo '<div class="details-options"><form role="form" class="fav-form"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
-                    <input type="hidden" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
+                    $query = 'SELECT * FROM favorites WHERE recipe_id = :recipe_id AND user_id = :user_id';
+                    $statement = $db->prepare($query);
+                    $statement->bindValue(':recipe_id', $recipe_id);
+                    $statement->bindValue(':user_id', $user_id);
+                    $statement->execute();
+                    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
+                    if (count($rows)) {
+                        echo '<div class="details-options"><form role="form" class="fav-form"><input type="hidden" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
+                        <input type="button" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
+                    } else {
+                        echo '<div class="details-options"><form role="form" class="fav-form"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
+                        <input type="hidden" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
+                    }
+                    
                     if($recipe_user == $username) {
                     echo '<form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
