@@ -71,7 +71,12 @@
 
                 echo '<div class="col-sm-4">';
                     echo '<div class="panel panel-primary">';
-                        echo '<div class="panel-heading">' . $recipe_name . '</div>';
+                        echo '<div class="panel-heading">
+                                <div class="col-sm-6">' . $recipe_name . '</div>
+                                <div class="col-sm-6">
+                                    - Rating
+                                </div>
+                            </div>';
                         echo '<div class="panel-body">' . $ingredients . '</div>';
                         echo '<div class="panel-footer">
                         <form role="form" autocomplete="off" action="recipedetails.php" method="post" enctype="multipart/form-data" class="details-form">
