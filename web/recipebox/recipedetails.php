@@ -198,7 +198,9 @@
             
             <div class="row details-options">
                 <input type="submit" name="submit" class="btn btn-default" value="Submit"/>
-                <input type="reset" name="reset" class="btn btn-default review-form" value="Reset"/>
+                <div class="review-form">
+                    <input type="reset" name="reset" class="btn btn-default review-form" value="Reset"/>
+                </div>
             </div>
         </form>
     </div>
