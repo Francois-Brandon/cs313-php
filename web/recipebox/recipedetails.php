@@ -13,10 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="res/star-rating.min.css">
     <link rel="stylesheet" type="text/css" href="recipe-style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+    <script src="res/star-rating.min.js" type="text/javascript"></script>
 </head>
 <body>
     
@@ -45,18 +47,49 @@
             $directions = htmlspecialchars($row['directions']);
             $recipe_user = htmlspecialchars($row['username']);
 
+            $stmt = $db->prepare('SELECT COUNT(stars), AVG(stars) FROM rating WHERE recipe_id = :recipe_id');
+            $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
+            $stmt->execute();
+            $ratingrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            foreach ($ratingrows as $rate) {
+                $avg = $rate['avg'];
+                $count = $rate['count'];
+            
+
+            echo '<div class="row"><h3>' . $recipe_name . '</h3></div>';
+            
+            echo '<div class="row"><table>
+                      <tr>
+                        <td style="padding-right:10px">
+                          <label for="star-input" class="control-label">Rating: </label>
+                        </td>
+                        <td>
+                          <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
+                        </td>
+                      </tr>
+                    </table>
+                <script>
+                $(document).on(\'ready\', function(){
+                    $(\'#star-input\').rating({displayOnly: true, step: 0.5});
+                });
+                </script></div>';
+                
+                }
+            
+            echo '<div class="row"><p>';
+            
             $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
             $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
             $stmt->execute();
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                echo '<div class="row"><h3>' . $recipe_name . '</h3></div><div class="row"><p>';
-
-                foreach ($rows as $value) {
-                    $ingredient = htmlspecialchars($value['item']);
-                    echo $ingredient . '<br>';
-                }
-                echo '</p></div><div class="row"><p>' . $directions . '</p></div><br>';
+            
+            foreach ($rows as $value) {
+                $ingredient = htmlspecialchars($value['item']);
+                echo $ingredient . '<br>';
+            }
+            
+            echo '</p></div><div class="row"><p>' . $directions . '</p></div><br>';
 
 
         }
