@@ -472,6 +472,11 @@ label {
     padding-top: 12px;
 }
 
+.review-form {
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
 @media only screen and (max-width: 768px) {
     .dropdown-menu li a {
         color: #d5d5d5 !important
