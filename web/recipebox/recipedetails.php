@@ -71,7 +71,7 @@
                     </table>
                 <script>
                 $(document).on(\'ready\', function(){
-                    $(\'#star-input\').rating({displayOnly: true, step: 0.5});
+                    $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
                 });
                 </script></div>';
                 
