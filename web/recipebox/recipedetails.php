@@ -25,127 +25,124 @@
     
     
 <div class="container results-container">
-	<div class="row submit-panel">
+	<div class="submit-panel">
         
-        <!--<div class="control-group" id="fields">    
-            <div class="controls">--> 
-                <?php 
-                
-                $username = $_SESSION['username'];
-                $recipe_id = $_POST['recipe_id'];
-                $recipe_user = '';
+        <?php 
 
-                $query = 'SELECT r.recipe_name, r.directions, r.user_id, l.username FROM recipe AS r JOIN login AS l ON r.user_id = l.id WHERE r.recipe_id = :recipe_id';
-                $statement = $db->prepare($query);
-                $statement->bindValue(':recipe_id', $recipe_id);
-                $statement->execute();
-                $recrows = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $username = $_SESSION['username'];
+        $recipe_id = $_POST['recipe_id'];
+        $recipe_user = '';
 
-                foreach ($recrows as $row) {
-                    $recipe_name = htmlspecialchars($row['recipe_name']);
-                    
-                    $directions = htmlspecialchars($row['directions']);
-                    $recipe_user = htmlspecialchars($row['username']);
+        $query = 'SELECT r.recipe_name, r.directions, r.user_id, l.username FROM recipe AS r JOIN login AS l ON r.user_id = l.id WHERE r.recipe_id = :recipe_id';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':recipe_id', $recipe_id);
+        $statement->execute();
+        $recrows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-                    $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
-                    $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
-                    $stmt->execute();
-                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($recrows as $row) {
+            $recipe_name = htmlspecialchars($row['recipe_name']);
 
-                        echo '<div class="row"><h3>' . $recipe_name . '</h3></div><div class="row"><p>';
-                
-                        foreach ($rows as $value) {
-                            $ingredient = htmlspecialchars($value['item']);
-                            echo $ingredient . '<br>';
-                        }
-                        echo '</p></div><div class="row"><p>' . $directions . '</p></div><br>';
-                    
-                    
+            $directions = htmlspecialchars($row['directions']);
+            $recipe_user = htmlspecialchars($row['username']);
+
+            $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
+            $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                echo '<div class="row"><h3>' . $recipe_name . '</h3></div><div class="row"><p>';
+
+                foreach ($rows as $value) {
+                    $ingredient = htmlspecialchars($value['item']);
+                    echo $ingredient . '<br>';
                 }
-                
-                $query = 'SELECT id FROM login WHERE username = :username';
-                $statement = $db->prepare($query);
-                $statement->bindValue(':username', $username);
-                $statement->execute();
-                $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+                echo '</p></div><div class="row"><p>' . $directions . '</p></div><br>';
 
 
-                foreach ($rows as $row) {
-                    $user_id = $row['id'];
-                }
-                
-                if (isset($_SESSION['username'])) {
-                    
-                    echo '<div class="row">';
-                    
-                    $query = 'SELECT * FROM favorites WHERE recipe_id = :recipe_id AND user_id = :user_id';
-                    $statement = $db->prepare($query);
-                    $statement->bindValue(':recipe_id', $recipe_id);
-                    $statement->bindValue(':user_id', $user_id);
-                    $statement->execute();
-                    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        $query = 'SELECT id FROM login WHERE username = :username';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':username', $username);
+        $statement->execute();
+        $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
-                    if (count($rows)) {
-                        echo '<div class="details-options"><form role="form" class="fav-form"><input type="hidden" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
-                        <input type="button" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
-                    } else {
-                        echo '<div class="details-options"><form role="form" class="fav-form"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
-                        <input type="hidden" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
-                    }
-                    
-                    if($recipe_user == $username) {
-                    echo '<form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
-                                <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
-                                <button type="submit" class="btn btn-default">Delete</button>
-                            </form>
-                            <form role="form" class="edit-form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
-                                <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
-                                <button type="submit" class="btn btn-default">Edit</button>
-                            </form></div>';
-                    }
-                
-                echo "</div><script>
-                         $(document).ready(function(){
-                             $('#addfav').click(function() {
+        foreach ($rows as $row) {
+            $user_id = $row['id'];
+        }
 
-                                 $.ajax({
-                                     type: 'POST',
-                                     url: 'addfavorite.php',
-                                     data: { recipe_id:" . $recipe_id . " },
-                                     success: function(data){
-                                         $('#addfav').attr(\"type\", \"hidden\");
-                                         $('#removefav').attr(\"type\", \"button\");
-                                     }
-                                 });
+        if (isset($_SESSION['username'])) {
 
-                             });
+            echo '<div class="row">';
+
+            $query = 'SELECT * FROM favorites WHERE recipe_id = :recipe_id AND user_id = :user_id';
+            $statement = $db->prepare($query);
+            $statement->bindValue(':recipe_id', $recipe_id);
+            $statement->bindValue(':user_id', $user_id);
+            $statement->execute();
+            $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
+            if (count($rows)) {
+                echo '<div class="details-options"><form role="form" class="fav-form"><input type="hidden" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
+                <input type="button" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
+            } else {
+                echo '<div class="details-options"><form role="form" class="fav-form"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
+                <input type="hidden" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
+            }
+
+            if($recipe_user == $username) {
+            echo '<form role="form" class="delete-form" autocomplete="off" action="deleterecipe.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
+                        <button type="submit" class="btn btn-default">Delete</button>
+                    </form>
+                    <form role="form" class="edit-form" autocomplete="off" action="editrecipe.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="recipe_id" value="' . $recipe_id . '">
+                        <button type="submit" class="btn btn-default">Edit</button>
+                    </form></div>';
+            }
+
+        echo "</div><script>
+                 $(document).ready(function(){
+                     $('#addfav').click(function() {
+
+                         $.ajax({
+                             type: 'POST',
+                             url: 'addfavorite.php',
+                             data: { recipe_id:" . $recipe_id . " },
+                             success: function(data){
+                                 $('#addfav').attr(\"type\", \"hidden\");
+                                 $('#removefav').attr(\"type\", \"button\");
+                             }
                          });
-                         
-                         $(document).ready(function(){
-                             $('#removefav').click(function() {
 
-                                 $.ajax({
-                                     type: 'POST',
-                                     url: 'removefavorite.php',
-                                     data: { recipe_id:" . $recipe_id . " },
-                                     success: function(data){
-                                         $('#removefav').attr(\"type\", \"hidden\");
-                                         $('#addfav').attr(\"type\", \"button\");
-                                     }
-                                 });
+                     });
+                 });
 
-                             });
+                 $(document).ready(function(){
+                     $('#removefav').click(function() {
+
+                         $.ajax({
+                             type: 'POST',
+                             url: 'removefavorite.php',
+                             data: { recipe_id:" . $recipe_id . " },
+                             success: function(data){
+                                 $('#removefav').attr(\"type\", \"hidden\");
+                                 $('#addfav').attr(\"type\", \"button\");
+                             }
                          });
-                    </script>";
-                }
-                ?>
-                
-                <br>
-            </div>
-        </div>
-	<!--</div>
-</div>-->
+
+                     });
+                 });
+            </script>";
+        }
+        ?>
+
+        <br>
+    </div>
+</div>
+
     
 <?php require 'res/footer.php'; ?>
     
