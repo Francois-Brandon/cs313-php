@@ -65,7 +65,7 @@
                           <label for="star-input" class="control-label">Rating: </label>
                         </td>
                         <td>
-                          <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
+                          <input id="star-input" name="star-input" value="' . $avg . '" class="rating">
                         </td>
                         <td><label class="control-label">' . $count . '   Reviews</label></td>
                       </tr>
@@ -177,6 +177,24 @@
     </div>
 </div>
 
+<div class="container results-container">
+	<div class="submit-panel">
+        <form role="form" autocomplete="off" action="submitreview.php" method="post" enctype="multipart/form-data">
+            <div class="row"><h3>Submit a Review</h3></div>
+            <div class="row">
+                <label for="review-rating" class="control-label">Rating</label>
+                <input id="review-rating" class="rating" value="0" data-min="0" data-max="5" data-step="1" data-size="lg"><hr/>
+            </div>
+            <input type="submit" name="submit" class="submit action-button btn-default" value="Submit"/><input type="reset" name="reset" class="submit action-button btn-default" value="Reset"/>
+        </form>
+    </div>
+</div>
+    
+<script>
+    $(document).on('ready', function(){
+        $('#review-rating').rating();
+    });
+</script>
     
 <?php require 'res/footer.php'; ?>
     
