@@ -67,7 +67,7 @@
                         <td>
                           <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
                         </td>
-                        <td>' . $count . ' Reviews</td>
+                        <td><label class="control-label">' . $count . ' Reviews</label></td>
                       </tr>
                     </table>
                 <script>
