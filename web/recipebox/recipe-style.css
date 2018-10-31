@@ -167,6 +167,10 @@ h3 a:hover {
     padding-bottom: 75px;
 }
 
+.review-container {
+    padding-bottom: 75px;
+}
+
 .submit-panel {
     background-color: #fff !important;
     border-color: #fff !important;

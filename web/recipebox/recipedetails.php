@@ -177,18 +177,23 @@
     </div>
 </div>
 
-<div class="container results-container">
+<div class="container review-container">
 	<div class="submit-panel">
         <form role="form" autocomplete="off" action="submitreview.php" method="post" enctype="multipart/form-data">
             <div class="row"><h3>Submit a Review</h3></div>
             <div class="row">
                 <label for="review-rating" class="control-label">Rating</label>
-                <input id="review-rating" class="rating rating-loading" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
+                <input id="review-rating" class="rating-loading" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
+                <script>
+                    $(document).on('ready', function(){
+                        $('#review-rating').rating({showCaption: false, showClear: false});
+                    });
+                </script>
             </div>
             
             <div class="row">
                 <label for="review-comments" class="control-label">Comments</label>
-                <textarea name="review-comments" rows="20" class="form-control"></textarea>
+                <textarea name="review-comments" rows="10" class="form-control"></textarea>
             </div>
             
             <div class="row">
@@ -199,11 +204,7 @@
     </div>
 </div>
     
-<script>
-    $(document).on('ready', function(){
-        $('#review-rating').rating({showCaption: false, showClear: false});
-    });
-</script>
+
     
 <?php require 'res/footer.php'; ?>
     
