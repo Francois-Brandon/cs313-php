@@ -65,7 +65,7 @@
                           <label for="star-input" class="control-label">Rating: </label>
                         </td>
                         <td>
-                          <input id="star-input" name="star-input" value="' . $avg . '" class="rating">
+                          <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
                         </td>
                         <td><label class="control-label">' . $count . '   Reviews</label></td>
                       </tr>
@@ -183,7 +183,7 @@
             <div class="row"><h3>Submit a Review</h3></div>
             <div class="row">
                 <label for="review-rating" class="control-label">Rating</label>
-                <input id="review-rating" class="rating" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
+                <input id="review-rating" class="rating rating-loading" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
             </div>
             
             <div class="row">
