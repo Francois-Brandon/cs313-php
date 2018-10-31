@@ -69,7 +69,7 @@
             
             
 
-                echo '<div class="col-sm-4">';
+                echo '<div class="">';
                     echo '<div class="panel panel-primary">';
                         echo '<div class="panel-heading">' . $recipe_name . '</div>';
                         echo '<div class="panel-body">' . $ingredients . '</div>';

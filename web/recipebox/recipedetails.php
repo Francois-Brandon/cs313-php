@@ -179,31 +179,42 @@
 
 <div class="container review-container">
 	<div class="submit-panel">
-        <form role="form" autocomplete="off" action="submitreview.php" method="post" enctype="multipart/form-data">
-            <div class="row"><h3>Submit a Review</h3></div>
-            <div class="row">
-                <label for="review-rating" class="control-label">Rating:</label>
-                <input id="review-rating" class="rating-loading" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
-                <script>
-                    $(document).on('ready', function(){
-                        $('#review-rating').rating({showCaption: false, showClear: false});
-                    });
-                </script>
-            </div>
-            
-            <div class="row">
-                <label for="review-comments" class="control-label">Comments:</label>
-                <textarea name="review-comments" rows="10" class="form-control"></textarea>
-            </div>
-            
-            <div class="row details-options">
-                <div class="review-form">
-                    <input type="submit" name="submit" class="btn btn-default" value="Submit"/>
-                
-                    <input type="reset" name="reset" class="btn btn-default review-form" value="Reset"/>
+        <?php
+        
+        if (isset($_SESSION['username'])) {
+            echo '<form role="form" autocomplete="off" action="submitreview.php" method="post" enctype="multipart/form-data">
+                <div class="row"><h3>Submit a Review</h3></div>
+                <div class="row">
+                    <label for="review-rating" class="control-label">Rating:</label>
+                    <input id="review-rating" name="review-rating" class="rating-loading" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
+                    <script>
+                        $(document).on(\'ready\', function(){
+                            $(\'#review-rating\').rating({showCaption: false, showClear: false});
+                        });
+                    </script>
                 </div>
-            </div>
-        </form>
+
+                <div class="row">
+                    <label for="review-comments" class="control-label">Comments:</label>
+                    <textarea name="review-comments" rows="10" class="form-control"></textarea>
+                    <input type="hidden" name="recipe_id" value="' . $_POST['recipe_id'] . '">
+                </div>
+
+                <div class="row details-options">
+                    <div class="review-form">
+                        <input type="submit" name="submit" class="btn btn-default" value="Submit"/>
+
+                        <input type="reset" name="reset" class="btn btn-default review-form" value="Reset"/>
+                    </div>
+                </div>
+            </form>';
+        } 
+        else {
+            echo '<h3 class="center"><a href="signin.php">Sign In to review this recipe!</a></h3>';
+        }
+        
+        ?>
+        
     </div>
 </div>
     
