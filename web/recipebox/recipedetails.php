@@ -182,7 +182,7 @@
         <form role="form" autocomplete="off" action="submitreview.php" method="post" enctype="multipart/form-data">
             <div class="row"><h3>Submit a Review</h3></div>
             <div class="row">
-                <label for="review-rating" class="control-label">Rating</label>
+                <label for="review-rating" class="control-label">Rating:</label>
                 <input id="review-rating" class="rating-loading" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
                 <script>
                     $(document).on('ready', function(){
@@ -192,13 +192,13 @@
             </div>
             
             <div class="row">
-                <label for="review-comments" class="control-label">Comments</label>
+                <label for="review-comments" class="control-label">Comments:</label>
                 <textarea name="review-comments" rows="10" class="form-control"></textarea>
             </div>
             
-            <div class="row">
-                <input type="submit" name="submit" class="submit action-button btn-default" value="Submit"/>
-                <input type="reset" name="reset" class="submit action-button btn-default" value="Reset"/>
+            <div class="row details-options">
+                <input type="submit" name="submit" class="btn btn-default" value="Submit"/>
+                <input type="reset" name="reset" class="btn btn-default" value="Reset"/>
             </div>
         </form>
     </div>
