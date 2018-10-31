@@ -183,16 +183,25 @@
             <div class="row"><h3>Submit a Review</h3></div>
             <div class="row">
                 <label for="review-rating" class="control-label">Rating</label>
-                <input id="review-rating" class="rating" value="0" data-min="0" data-max="5" data-step="1" data-size="lg"><hr/>
+                <input id="review-rating" class="rating" value="0" data-min="0" data-max="5" data-step="1" data-size="lg">
             </div>
-            <input type="submit" name="submit" class="submit action-button btn-default" value="Submit"/><input type="reset" name="reset" class="submit action-button btn-default" value="Reset"/>
+            
+            <div class="row">
+                <label for="review-comments" class="control-label">Comments</label>
+                <textarea name="review-comments" rows="20" class="form-control"></textarea>
+            </div>
+            
+            <div class="row">
+                <input type="submit" name="submit" class="submit action-button btn-default" value="Submit"/>
+                <input type="reset" name="reset" class="submit action-button btn-default" value="Reset"/>
+            </div>
         </form>
     </div>
 </div>
     
 <script>
     $(document).on('ready', function(){
-        $('#review-rating').rating();
+        $('#review-rating').rating({showCaption: false, showClear: false});
     });
 </script>
     
