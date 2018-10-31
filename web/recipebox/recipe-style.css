@@ -460,6 +460,14 @@ footer {
     border-color: #ccc;
 }
 
+table {
+    margin-top: -10px;
+}
+
+label {
+    padding-top: 8px;
+}
+
 @media only screen and (max-width: 768px) {
     .dropdown-menu li a {
         color: #d5d5d5 !important
