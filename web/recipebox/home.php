@@ -153,6 +153,8 @@
                          url: 'pagination.php',
                          data: { pageno: nextPage },
                          success: function(data){
+                             function(){
+                                $('#star-input').rating({displayOnly: true, step: 0.5, showCaption: false});
                              $('#response').append(data);
                              $('#pageno').val(nextPage);
                              $('#loader').hide();
