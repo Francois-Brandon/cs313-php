@@ -28,6 +28,10 @@ h3 a:hover {
     font-family: 'Special Elite', cursive;
 }
 
+.center-padding {
+    padding: 30px !important;
+}
+
 .center a {
     text-align: center;
     color: #2d2d30;
@@ -37,9 +41,7 @@ h3 a:hover {
     text-align: center;
 }
 
-.center-padding {
-    padding: 30px !important;
-}
+
 
 .navbar {
     margin-bottom: 0;

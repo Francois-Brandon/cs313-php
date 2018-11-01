@@ -210,7 +210,7 @@
             </form>';
         } 
         else {
-            echo '<h3 class="center center-padding"><a href="signin.php">Sign In to review this recipe!</a></h3>';
+            echo '<h3 class="center-padding center"><a href="signin.php">Sign In to review this recipe!</a></h3>';
         }
         
         ?>
