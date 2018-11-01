@@ -551,10 +551,6 @@ label {
 
 
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-body { margin: 50px; text-align: center; font-family: 'Open Sans', sans-serif; background: #f2fbff; font-size: .6em;}
-
-
 @media only screen and (max-width: 768px) {
     .dropdown-menu li a {
         color: #d5d5d5 !important
