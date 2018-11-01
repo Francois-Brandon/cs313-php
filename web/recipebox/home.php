@@ -78,7 +78,8 @@
             $ratingrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
             foreach ($ratingrows as $rate) {
-                $avg = $rate['avg'];
+                $avgnon = $rate['avg'];
+                $avg = floor($avgnon * 2) / 2;
                 $numratings = $rate['count'];
             }
             
