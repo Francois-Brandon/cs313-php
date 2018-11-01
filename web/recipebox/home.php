@@ -86,8 +86,8 @@
 
                 echo '<div class="col-sm-4">';
                     echo '<div class="panel panel-primary">';
-                        echo '<div class="panel-heading">' . $recipe_name; 
-                            if ($numratings) {
+                        echo '<div class="panel-heading">' . $recipe_name . '</div>'; 
+                            /*if ($numratings) {
                                 echo '<p>no ratings</p>';
                             }
                             else {
@@ -99,7 +99,7 @@
                                 });
                                 </script>
                                 </div>';
-                            }
+                            }*/
                         echo '<div class="panel-body">' . $ingredients . '</div>';
                         echo '<div class="panel-footer">
                         <form role="form" autocomplete="off" action="recipedetails.php" method="post" enctype="multipart/form-data" class="details-form">
