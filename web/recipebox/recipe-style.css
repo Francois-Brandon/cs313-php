@@ -202,10 +202,14 @@ textarea {
     background-color: #2d2d30 !important;
     border-color: #2d2d30 !important;
     opacity:0.9;
-    height: 41px;
+    height: 60px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.panel-heading p {
+    font-size: 12px;
 }
 
 .panel-primary {
