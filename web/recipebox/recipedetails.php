@@ -218,6 +218,33 @@
     </div>
 </div>
     
+<div class="container review-container">
+	<div class="submit-panel">
+        <div class="row"><h3>Reviews</h3></div>
+        
+        <?php
+            $query = 'SELECT * FROM rating WHERE recipe_id = :recipe_id ORDER BY date_created DESC LIMIT 4';
+            $statement = $db->prepare($query);
+            $statement->bindValue(':recipe_id', $recipe_id);
+            $statement->execute();
+            $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+        
+            foreach ($rows as $row) {
+                $stars = $row['stars'];
+                $comment = $row['comment'];
+                
+                
+                echo '<div class="row"><div class="star-ratings-css" title="' . $stars . '"></div></div>';
+                echo '<div class="row"><p>' . $comment . '</p></div>';
+                
+            }
+        
+        ?>   
+        
+    </div>
+</div>
+    
+    
 
     
 <?php require 'res/footer.php'; ?>

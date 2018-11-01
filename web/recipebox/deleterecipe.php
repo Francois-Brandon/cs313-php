@@ -11,6 +11,16 @@ $statement = $db->prepare($query);
 $statement->bindValue(':recipe_id', $recipe_id);
 $statement->execute();
 
+$query = 'DELETE FROM rating WHERE recipe_id = :recipe_id';
+$statement = $db->prepare($query);
+$statement->bindValue(':recipe_id', $recipe_id);
+$statement->execute();
+
+$query = 'DELETE FROM favorites WHERE recipe_id = :recipe_id';
+$statement = $db->prepare($query);
+$statement->bindValue(':recipe_id', $recipe_id);
+$statement->execute();
+
 $query = 'DELETE FROM recipe WHERE recipe_id = :recipe_id';
 $statement = $db->prepare($query);
 $statement->bindValue(':recipe_id', $recipe_id);
