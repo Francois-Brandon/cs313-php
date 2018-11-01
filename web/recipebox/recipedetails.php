@@ -67,7 +67,7 @@
                         <td>
                           <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
                         </td>
-                        <td><label class="control-label">' . $count . '   Reviews</label></td>
+                        <td><label class="control-label"><a href="#reviews">' . $count . '   Reviews</a></label></td>
                       </tr>
                     </table>
                 <script>
@@ -220,7 +220,7 @@
     
 <div class="container review-container">
 	<div class="submit-panel">
-        <div class="row"><h3>Reviews</h3></div>
+        <div class="row" id="reviews"><h3>Reviews</h3></div>
         
         <?php
             $query = 'SELECT * FROM rating WHERE recipe_id = :recipe_id ORDER BY date_created DESC LIMIT 4';
