@@ -36,6 +36,11 @@ h3 a:hover {
 .center {
     text-align: center;
 }
+
+.center-padding {
+    text-align: center;
+    padding: 30px;
+}
  
 .navbar {
     margin-bottom: 0;
