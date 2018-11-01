@@ -91,7 +91,7 @@
                                 echo '<p>no ratings</p></div>';
                             }
                             else {
-                                echo '<br><div class="star-ratings-css" title="' . $avg . '"></div>';
+                                echo '<div class="star-ratings-css" title="' . $avg . '"></div></div>';
                             }
                         echo '<div class="panel-body">' . $ingredients . '</div>';
                         echo '<div class="panel-footer">
