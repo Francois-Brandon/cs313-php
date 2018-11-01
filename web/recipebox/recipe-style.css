@@ -491,15 +491,14 @@ label {
 .star-ratings-css {
   unicode-bidi: bidi-override;
   color: #c5c5c5;
-  font-size: 25px;
+  font-size: 15px;
   height: 25px;
   width: 100px;
-  margin: 0 auto;
   position: relative;
   text-shadow: 0 1px 0 #a2a2a2;
 } 
 .star-ratings-css::before { 
-  content: '★★★★';
+  content: '★★★★★';
   opacity: .3;
 }
 
