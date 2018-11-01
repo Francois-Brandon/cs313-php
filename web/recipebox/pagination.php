@@ -51,10 +51,10 @@ foreach ($rows as $row) {
                     }
                     else {
                         echo '<br>
-                        <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading" displayOnly="true" step="0.5" showCaption="false">
+                        <input id="' . $recipe_id . '" name="star-input" value="' . $avg . '" class="rating-loading">
                         <script>
                         $(document).on(\'ready\', function(){
-                        $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
+                        $(\'#' . $recipe_id . '\').rating({displayOnly: true, step: 0.5, showCaption: false});
                         });
                         </script>
                         </div>';

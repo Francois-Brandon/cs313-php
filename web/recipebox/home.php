@@ -157,7 +157,7 @@
                              $('#pageno').val(nextPage);
                              $('#loader').hide();
                          },
-                         complete: function(){
+                         ajaxComplete: function(){
                             $('#star-input').rating({displayOnly: true, step: 0.5, showCaption: false});
                         }
                      });
