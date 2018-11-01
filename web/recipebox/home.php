@@ -86,9 +86,9 @@
 
                 echo '<div class="col-sm-4">';
                     echo '<div class="panel panel-primary">';
-                        echo '<div class="panel-heading">' . $recipe_name . '</div>'; 
-                            /*if ($numratings) {
-                                echo '<p>no ratings</p>';
+                        echo '<div class="panel-heading">' . $recipe_name; 
+                            if ($numratings == 0) {
+                                echo '<p>no ratings</p></div>';
                             }
                             else {
                                 echo '<br>
