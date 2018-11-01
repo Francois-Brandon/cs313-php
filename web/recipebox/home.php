@@ -99,7 +99,7 @@
                                 });
                                 </script>
                                 </div>';
-                            }*/
+                            }
                         echo '<div class="panel-body">' . $ingredients . '</div>';
                         echo '<div class="panel-footer">
                         <form role="form" autocomplete="off" action="recipedetails.php" method="post" enctype="multipart/form-data" class="details-form">
