@@ -39,7 +39,8 @@ foreach ($rows as $row) {
     $ratingrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($ratingrows as $rate) {
-        $avg = $rate['avg'];
+        $avgnon = $rate['avg'];
+        $avg = floor($avgnon * 2) / 2;
         $numratings = $rate['count'];
     }
 
@@ -50,14 +51,7 @@ foreach ($rows as $row) {
                         echo '<p>no ratings</p></div>';
                     }
                     else {
-                        echo '<br>
-                        <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
-                        <script>
-                        $(document).on(\'ready\', function(){
-                        $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
-                        });
-                        </script>
-                        </div>';
+                        echo '<div class="star-ratings-css" title="' . $avg . '"></div>';
                     }
                 echo '<div class="panel-body">' . $ingredients . '</div>';
                 echo '<div class="panel-footer">

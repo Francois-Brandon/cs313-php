@@ -91,14 +91,7 @@
                                 echo '<p>no ratings</p></div>';
                             }
                             else {
-                                echo '<br>
-                                <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
-                                <script>
-                                $(document).on(\'ready\', function(){
-                                $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
-                                });
-                                </script>
-                                </div>';
+                                echo '<br><div class="star-ratings-css" title="' . $avg . '"></div>';
                             }
                         echo '<div class="panel-body">' . $ingredients . '</div>';
                         echo '<div class="panel-footer">
@@ -143,10 +136,6 @@
         <img id="loader" src="res/loader.svg">
       </div>
         <script>
-
-        function initStar() {
-            $('#star-input').rating({displayOnly: true, step: 0.5, showCaption: false});
-        }
     
          $(document).ready(function(){
              $('#loader').on('inview', function(event, isInView) {
@@ -161,7 +150,6 @@
                              $('#response').append(data);
                              $('#pageno').val(nextPage);
                              $('#loader').hide();
-                             initStar();
                          }
                      });
                  }
