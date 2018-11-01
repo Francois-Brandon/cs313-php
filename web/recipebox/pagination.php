@@ -20,6 +20,9 @@ foreach ($rows as $row) {
     $recipe_id = htmlspecialchars($row['recipe_id']);
     $ingredients = '';
     $directions = htmlspecialchars($row['directions']);
+    
+    $avg = 0;
+    $numratings = 0;
 
     $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
     $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
@@ -31,7 +34,15 @@ foreach ($rows as $row) {
         $ingredients .= htmlspecialchars($value['item']) . '<br>';
     }
 
+    $stmt = $db->prepare('SELECT COUNT(stars), AVG(stars) FROM rating WHERE recipe_id = :recipe_id');
+    $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $ratingrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    foreach ($ratingrows as $rate) {
+        $avg = $rate['avg'];
+        $numratings = $rate['count'];
+    }
 
         echo '<div class="col-sm-4">';
             echo '<div class="panel panel-primary">';
