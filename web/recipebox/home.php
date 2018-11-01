@@ -57,6 +57,9 @@
             $ingredients = '';
             $directions = htmlspecialchars($row['directions']);
             
+            $avg = 0;
+            $numratings = 0;
+            
             $stmt = $db->prepare('SELECT item FROM ingredients WHERE recipe_id=:recipe_id');
             $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
             $stmt->execute();
@@ -67,11 +70,34 @@
                 $ingredients .= htmlspecialchars($value['item']) . '<br>';
             }
             
+            $stmt = $db->prepare('SELECT COUNT(stars), AVG(stars) FROM rating WHERE recipe_id = :recipe_id');
+            $stmt->bindValue(':recipe_id', $recipe_id, PDO::PARAM_INT);
+            $stmt->execute();
+            $ratingrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            foreach ($ratingrows as $rate) {
+                $avg = $rate['avg'];
+                $numratings = $rate['count'];
+            }
+            
             
 
                 echo '<div class="col-sm-4">';
                     echo '<div class="panel panel-primary">';
-                        echo '<div class="panel-heading">' . $recipe_name . '</div>';
+                        echo '<div class="panel-heading">' . $recipe_name; 
+                            if ($numratings) {
+                                echo '<p>no ratings</p>';
+                            }
+                            else {
+                                echo '<br>
+                                <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
+                                <script>
+                                $(document).on(\'ready\', function(){
+                                $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
+                                });
+                                </script>
+                                </div>';
+                            }
                         echo '<div class="panel-body">' . $ingredients . '</div>';
                         echo '<div class="panel-footer">
                         <form role="form" autocomplete="off" action="recipedetails.php" method="post" enctype="multipart/form-data" class="details-form">
