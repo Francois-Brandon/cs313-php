@@ -502,6 +502,19 @@ label {
   opacity: .3;
 }
 
+.star-ratings-css::after {
+  color: gold;
+  content: '★★★★★';
+  text-shadow: 0 1px 0 #ab5414;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  left: 0;
+  top:0;
+  width: attr(rating);
+  overflow: hidden;
+}
+
 [title=".000"]::after {
   width: 0%;
 }
@@ -535,18 +548,7 @@ label {
 [title="5"]::after {
   width: 100%;
 }
-.star-ratings-css::after {
-  color: gold;
-  content: '★★★★★';
-  text-shadow: 0 1px 0 #ab5414;
-  position: absolute;
-  z-index: 1;
-  display: block;
-  left: 0;
-  top:0;
-  width: attr(rating);
-  overflow: hidden;
-}
+
 
 
 
