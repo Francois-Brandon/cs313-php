@@ -29,8 +29,7 @@ foreach ($rows as $row) {
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($rows as $value)
-    {
+    foreach ($rows as $value) {
         $ingredients .= htmlspecialchars($value['item']) . '<br>';
     }
 
@@ -47,19 +46,19 @@ foreach ($rows as $row) {
         echo '<div class="col-sm-4">';
             echo '<div class="panel panel-primary">';
                 echo '<div class="panel-heading">' . $recipe_name; 
-                            if ($numratings == 0) {
-                                echo '<p>no ratings</p></div>';
-                            }
-                            else {
-                                echo '<br>
-                                <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
-                                <script>
-                                $(document).on(\'ready\', function(){
-                                $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
-                                });
-                                </script>
-                                </div>';
-                            }
+                    if ($numratings == 0) {
+                        echo '<p>no ratings</p></div>';
+                    }
+                    else {
+                        echo '<br>
+                        <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
+                        <script>
+                        $(document).on(\'ready\', function(){
+                        $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
+                        });
+                        </script>
+                        </div>';
+                    }
                 echo '<div class="panel-body">' . $ingredients . '</div>';
                 echo '<div class="panel-footer">
                         <form role="form" autocomplete="off" action="recipedetails.php" method="post" enctype="multipart/form-data" class="details-form">
