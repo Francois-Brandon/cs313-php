@@ -143,6 +143,11 @@
         <img id="loader" src="res/loader.svg">
       </div>
         <script>
+
+        function initStar() {
+            $('#star-input').rating({displayOnly: true, step: 0.5, showCaption: false});
+        }
+    
          $(document).ready(function(){
              $('#loader').on('inview', function(event, isInView) {
                  if (isInView) {
@@ -156,10 +161,8 @@
                              $('#response').append(data);
                              $('#pageno').val(nextPage);
                              $('#loader').hide();
-                         },
-                         ajaxComplete: function(){
-                            $('#star-input').rating({displayOnly: true, step: 0.5, showCaption: false});
-                        }
+                             initStar();
+                         }
                      });
                  }
              });
