@@ -41,6 +41,11 @@ h3 a:hover {
     text-align: center;
     padding: 30px;
 }
+
+.center-padding a {
+    text-align: center;
+    color: #2d2d30;
+}
  
 .navbar {
     margin-bottom: 0;
