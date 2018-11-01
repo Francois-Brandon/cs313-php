@@ -53,7 +53,8 @@
             $ratingrows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
             foreach ($ratingrows as $rate) {
-                $avg = $rate['avg'];
+                $avgnon = $rate['avg'];
+                $avg = floor($avgnon * 2) / 2;
                 $count = $rate['count'];
             
 
@@ -65,16 +66,12 @@
                           <label for="star-input" class="control-label">Rating: </label>
                         </td>
                         <td>
-                          <input id="star-input" name="star-input" value="' . $avg . '" class="rating-loading">
+                          <div class="star-ratings-css" title="' . $avg . '"></div>
                         </td>
                         <td><label class="control-label"><a href="#reviews">' . $count . '   Reviews</a></label></td>
                       </tr>
                     </table>
-                <script>
-                $(document).on(\'ready\', function(){
-                    $(\'#star-input\').rating({displayOnly: true, step: 0.5, showCaption: false});
-                });
-                </script></div>';
+                </div>';
                 
                 }
             
