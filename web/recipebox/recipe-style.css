@@ -516,37 +516,37 @@ label {
 }
 
 [title="0"]::after {
-  width: 0%;
+  width: 0;
 }
 [title=".5"]::after {
-  width: 7.5%;
+  width: 7.5;
 }
 [title="1"]::after {
-  width: 15%;
+  width: 15;
 }
 [title="1.5"]::after {
-  width: 22.5%;
+  width: 22.5;
 }
 [title="2"]::after {
-  width: 30%;
+  width: 30;
 }
 [title="2.5"]::after {
-  width: 37.5%;
+  width: 37.5;
 }
 [title="3"]::after {
-  width: 45%;
+  width: 45;
 }
 [title="3.5"]::after {
-  width: 52.5%;
+  width: 52.5;
 }
 [title="4"]::after {
-  width: 60%;
+  width: 60;
 }
 [title="4.5"]::after {
-  width: 67.5%;
+  width: 67.5;
 }
 [title="5"]::after {
-  width: 75%;
+  width: 75;
 }
 
 
