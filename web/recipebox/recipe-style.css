@@ -570,19 +570,13 @@ label {
         background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
     }
 }
-
+*/
 @media only screen and (min-width: 375px) {
-    .panel-body:after {
-        position: absolute;
-        bottom: 40px;
-        left: 15px;
-        height: 150px;
-        width: 345px;
-        content: "";
-        background: linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(255,255,255, 0) 80% );
+    .signup-form h2:before, .signup-form h2:after{
+        width: 20%;
     }
 }
-
+/*
 @media only screen and (min-width: 425px) {
     .panel-body:after {
         position: absolute;
