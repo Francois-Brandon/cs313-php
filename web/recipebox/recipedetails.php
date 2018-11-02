@@ -125,10 +125,10 @@
 
             if (count($rows)) {
                 echo '<div class="details-options"><form role="form" class="fav-form"><input type="hidden" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
-                <input type="button" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
+                <input type="button" id="removefav" value="Remove Favorite" class="btn btn-default fav-btn"></input></form>';
             } else {
                 echo '<div class="details-options"><form role="form" class="fav-form"><input type="button" id="addfav" value="Add to Favorites" class="btn btn-default fav-btn">
-                <input type="hidden" id="removefav" value="Remove From Favorites" class="btn btn-default fav-btn"></input></form>';
+                <input type="hidden" id="removefav" value="Remove Favorite" class="btn btn-default fav-btn"></input></form>';
             }
 
             if($recipe_user == $username) {
