@@ -228,23 +228,25 @@
             $statement->execute();
             $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
         
-            foreach ($rows as $row) {
-                $stars = $row['stars'];
-                $comment = $row['comment'];
-                
-                
-                echo '<div class="row"><div class="star-ratings-css" title="' . $stars . '"></div></div>';
-                echo '<div class="row"><p>' . $comment . '</p></div>';
-                
+            if (count($rows) == 0) {
+                echo '<div class="row"><p>No review have been submitted yet.</p></div>';
+            }
+            else {
+                foreach ($rows as $row) {
+                    $stars = $row['stars'];
+                    $comment = $row['comment'];
+
+
+                    echo '<div class="row"><div class="star-ratings-css" title="' . $stars . '"></div></div>';
+                    echo '<div class="row"><p>' . $comment . '</p></div>';
+
+                }
             }
         
         ?>   
         
     </div>
 </div>
-    
-    
-
     
 <?php require 'res/footer.php'; ?>
     
