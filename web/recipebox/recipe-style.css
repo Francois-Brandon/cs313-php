@@ -575,6 +575,10 @@ label {
     .signup-form h2:before, .signup-form h2:after{
         width: 20%;
     }
+    
+    .signup-form {
+        width: auto;
+    }
 }
 /*
 @media only screen and (min-width: 425px) {
