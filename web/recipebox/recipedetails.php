@@ -173,6 +173,7 @@
         <br>
     </div>
 </div>
+    </div>
 
 <div class="container review-container">
 	<div class="submit-panel">
