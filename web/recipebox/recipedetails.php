@@ -229,7 +229,7 @@
             $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
         
             if (count($rows) == 0) {
-                echo '<div class="row"><p>No review have been submitted yet.</p></div>';
+                echo '<div class="row"><p>No reviews have been submitted yet.</p></div>';
             }
             else {
                 foreach ($rows as $row) {
