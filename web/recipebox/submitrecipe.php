@@ -20,7 +20,7 @@
 <?php require 'res/nav.php'; ?>
     
 <div class="container results-container">
-	<div class="row submit-panel">
+	<div class="submit-panel">
         <div class="control-group" id="fields">    
             <div class="controls"> 
                 <?php 
