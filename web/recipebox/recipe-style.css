@@ -515,7 +515,7 @@ label {
   overflow: hidden;
 }
 
-[title=".000"]::after {
+[title="0"]::after {
   width: 0%;
 }
 [title=".5"]::after {
