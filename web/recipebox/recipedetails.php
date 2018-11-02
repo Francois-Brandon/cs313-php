@@ -61,15 +61,23 @@
             echo '<div class="row"><h3>' . $recipe_name . '</h3></div>';
             
             echo '<div class="row"><table>
-                      <tr>
-                        <td style="padding-right:10px">
-                          <label for="star-input" class="control-label">Rating: </label>
-                        </td>
-                        <td>
-                          <div class="star-ratings-css" title="' . $avg . '"></div>
-                        </td>
-                        <td><label class="control-label"><a href="#reviews">' . $count . '   Reviews</a></label></td>
-                      </tr>
+                      <tr>';
+                        if ($count == 0) {
+                        echo '<td style="padding-right:10px">No ratings</td>';
+                        }
+                        else {
+                        echo '<td style="padding-right:10px">
+                                <label for="star-input" class="control-label">Rating: </label>
+                              </td>
+                              <td>
+                                <div class="star-ratings-css" title="' . $avg . '"></div>
+                              </td>
+                              <td>
+                                <label class="control-label"><a href="#reviews">' . $count . '   Reviews</a></label>
+                              </td>';
+                        }
+                        
+                      echo '</tr>
                     </table>
                 </div>';
                 
